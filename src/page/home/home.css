@@ -1,0 +1,30 @@
+.algn-txt{
+    display: flex;
+    background: #edf2fa;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.hm-ld-txt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hm-font-header {
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 50px;
+    
+}
+
+.hm-shop-clr {
+    color: blue;
+}
+
+.hm-bg {
+width: 554px;
+height: 356px;
+
+}

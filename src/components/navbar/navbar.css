@@ -1,0 +1,22 @@
+.nv-bg {
+    background: #edf2fa;
+}
+
+.nv-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: inherit;
+    align-items: center;
+}
+
+
+.nv-txt {
+    margin-left: 5px;
+    font-family: Nunito;
+    color: #0300AD;
+    font-weight: 1000;
+}
+
+.nv-margin-right {
+   margin-right: 50px;
+}
