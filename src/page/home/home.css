@@ -3,7 +3,8 @@
     background: #edf2fa;
     justify-content: center;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 70px;
+    padding-bottom: 75px;
 }
 
 .hm-ld-txt {
@@ -14,9 +15,14 @@
 
 .hm-font-header {
     font-family: Nunito;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 50px;
     
+}
+
+.hm-font-desc {
+    font-family: Nunito;
+    font-size: 15px;
 }
 
 .hm-shop-clr {
@@ -24,7 +30,7 @@
 }
 
 .hm-bg {
-width: 554px;
-height: 356px;
+width: 574px;
+height: auto;
 
 }

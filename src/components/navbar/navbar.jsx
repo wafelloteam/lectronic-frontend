@@ -32,11 +32,14 @@ function NavigationBar() {
                 <Col className='nv-margin-right'>
                 <Nav.Link href="/underconstruct">Community</Nav.Link>
                 </Col>
-                <Col className='nv-margin-right'>
+                <Col>
                 <Nav.Link href="/underconstruct">About</Nav.Link>
                 </Col>
               </Row>
-              <Button variant='primary' size='sm'>Sign Up</Button>{' '}
+              <div>
+              <Button href='/login' variant='primary' size='large'>Login</Button>{' '}
+            <Button href='/register' variant='primary' size='large'>Sign Up</Button>{' '}
+            </div>
             </Container>
           </Container>
       </Navbar>

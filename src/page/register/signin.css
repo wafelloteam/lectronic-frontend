@@ -1,0 +1,30 @@
+.sign-contr {
+    margin-top: 30px;
+}
+
+.sign-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign-btn {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.sign-fontclr {
+    color: #777777;
+}
+
+.login-margn {
+    margin-top: 10px;
+}
+
+.login-crtacc {
+    color: #777777;
+    display: flex;
+    justify-content: center;
+}
+
