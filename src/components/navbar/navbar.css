@@ -1,14 +1,18 @@
 .nv-bg {
     background: #edf2fa;
+    
 }
 
 .nv-center {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: inherit;
     align-items: center;
 }
 
+.nv-signup-btn {
+    margin-right: 30px;
+}
 
 .nv-txt {
     margin-left: 5px;
