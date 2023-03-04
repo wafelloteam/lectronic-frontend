@@ -1,8 +1,9 @@
 import React from 'react'
 import './signin.css'
 import pict from '../../assets/image/Sign in.png'
-import userpict from '../../assets/icon/username.png'
-import passpict from '../../assets/icon/password.png'
+import userpict from '../../assets/icon/baseline_person_outline_black_24dp.png'
+import passpict from '../../assets/icon/baseline_vpn_key_black_24dp.png'
+import emailpict from '../../assets/icon/baseline_mail_outline_black_24dp.png'
 import { Button, Col, Container, Form, InputGroup, Row } from 'react-bootstrap'
 
 
@@ -25,7 +26,7 @@ function Register() {
         />
       </InputGroup>
       <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1"> <img src={userpict} alt='username'></img></InputGroup.Text>
+        <InputGroup.Text id="basic-addon1"> <img src={emailpict} alt='username'></img></InputGroup.Text>
         <Form.Control
           placeholder="Email"
           aria-label="Email"

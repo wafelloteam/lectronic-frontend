@@ -27,7 +27,7 @@ function NavigationBar() {
                 <Nav.Link href="/">Home</Nav.Link>
                 </Col>
                 <Col className='nv-margin-right'>
-                <Nav.Link href="/underconstruct">Product</Nav.Link>
+                <Nav.Link href="/product">Product</Nav.Link>
                 </Col>
                 <Col className='nv-margin-right'>
                 <Nav.Link href="/underconstruct">Community</Nav.Link>

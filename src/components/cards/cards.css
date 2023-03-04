@@ -1,0 +1,32 @@
+.card-rad {
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 5px 4px 50px rgba(3, 0, 173, 0.2);
+}
+
+.card-rad:hover {
+    transform: scale(1.1);
+    transition-duration: 800ms;
+}
+
+.card-txt1 {
+    font-family: Nunito;
+    font-weight:600;
+    font-size: 16px;
+    color: #333333;
+}
+
+.card-txt2 {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: 26px;
+    color: #0300AD;
+
+}
+
+
+.card-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

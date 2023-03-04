@@ -1,0 +1,17 @@
+.label_cat {
+    text-decoration: none;
+    padding: 15px 35px;
+    color: #777777;
+    font-family: 'Nunito';
+}
+
+.btn_gr {
+    margin: 60px 0;
+}
+
+#active {
+    background: #0300ad;
+    box-shadow: 5px 4px 50px rgba(3, 0, 173, 0.2);
+    border-radius: 10px;
+    color: #fff;
+}

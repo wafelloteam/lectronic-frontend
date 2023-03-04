@@ -1,8 +1,10 @@
 import React from 'react'
 import pict from '../../assets/image/login.png'
-import userpict from '../../assets/icon/username.png'
-import passpict from '../../assets/icon/password.png'
+import email from '../../assets/icon/baseline_mail_outline_black_24dp.png'
+import passpict from '../../assets/icon/baseline_vpn_key_black_24dp.png'
 import { Button, Col, Container, Form, InputGroup, Row } from 'react-bootstrap'
+
+//? untuk styling ngambil dari classname punya register gaes
 
 
 function Login() {
@@ -16,7 +18,7 @@ function Login() {
             <p className='sign-fontclr'>Steps to get started, find the best stuff.</p>
 
       <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1"> <img src={userpict} alt='username'></img></InputGroup.Text>
+        <InputGroup.Text id="basic-addon1"> <img src={email} alt='username'></img></InputGroup.Text>
         <Form.Control
           placeholder="Email"
           aria-label="Email"
@@ -36,20 +38,12 @@ function Login() {
             <div className='sign-btn'>
               <Button variant="primary">Login</Button>{' '}
               </div>
-                <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <div>
-                
-                
+              <br/>
+              <br/>
+              <br/>
+                <div>
               <p className='login-crtacc'>Not Registerd yet ?  <a href="/register">Create an Account</a> </p>
-             </div>
-              
+              </div>
             </Col>
             <Col>
             <Container>

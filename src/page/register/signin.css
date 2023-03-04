@@ -19,12 +19,17 @@
 }
 
 .login-margn {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .login-crtacc {
     color: #777777;
     display: flex;
     justify-content: center;
+}
+
+.regis-icn-size {
+    height: 15px;
+    width: 15px;
 }
 
