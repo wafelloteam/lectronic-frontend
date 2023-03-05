@@ -22,7 +22,7 @@ function Home() {
     try {
       const { data } = await api.requests({
         method: "GET",
-        url: "/vehicle/",
+        url: "/product/all",
       });
       setBest(data.data);
     } catch (error) {

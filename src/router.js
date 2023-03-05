@@ -5,6 +5,8 @@ import Login from "./page/Login/login"
 import Product from "./page/product/product"
 import Underconstruct from "./page/underconstruct/underconstruct"
 import PrivateRoutes from "./helpers/privateroute"
+import ForgetPassword from "./page/forget-password/forget-password"
+import UpdatePassword from "./page/update-password/update-password"
 
 
 
@@ -25,7 +27,8 @@ function router() {
         <Route path="/register" element={<Register/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/product" element={<Product/>} />
-        <Route path="" element='' />
+        <Route path="/forget-password" element={<ForgetPassword/>} />
+        <Route path="/auth/update-password/:id" element={<UpdatePassword/>} />
         <Route path="" element='' />
         <Route path="" element='' />
     </Routes>
