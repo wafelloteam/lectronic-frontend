@@ -1,0 +1,13 @@
+.src-search input{
+    border-radius: 10px;
+    height: 40px;
+    
+}
+
+.src-search button {
+    border-radius: 10px;
+    height: 40px;
+    width: 60px;
+    background-color: #0300AD;
+    
+}

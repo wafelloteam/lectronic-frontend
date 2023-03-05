@@ -1,17 +1,44 @@
-import React from 'react'
+import {React, useState, useEffect} from 'react'
 import './home.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Cards from '../../components/cards/cards'
 import NavigationBar from '../../components/navbar/navbar'
 import Footer from '../../components/footer/footer'
-import { Button, Card, Col, Container, Form, InputGroup, Nav, Row } from 'react-bootstrap'
-import example from '../../assets/image/AIAIAI-TMA-1.jpg'
+import Search from '../../components/searchbar/search'
+import Category from '../../components/navcategory/category'
+import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import pict from '../../assets/image/woman.png'
 import box from '../../assets/icon/box.png'
 import coin from '../../assets/icon/coin.png'
 import cart from '../../assets/icon/shopping_cart.png'
-import searchicon from '../../assets/icon/search.png'
+import useApi from '../../helpers/useApi'
+
 
 
 function Home() {
+  const api = useApi()
+  const [best, setBest] = useState([])
+
+  const getBest = async () => {
+    try {
+      const {data} = await api.requests({
+        method:'GET',
+        url:'/vehicle/'
+      })
+      setBest(data.data)
+      
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+    useEffect(() => {
+      getBest();
+      AOS.init({
+      });
+    },[])
+
   return (
     <>
     <div className='hm-bg-div' >
@@ -69,7 +96,11 @@ function Home() {
         <Row>
           <Col>
 
-      <Card className='hmCardStyle' style={{ width: '18rem'}}>
+      <Card 
+      data-aos="fade-up"
+      data-aos-delay="0"
+      data-aos-duration="1000"
+      className='hmCardStyle' style={{ width: '18rem'}}>
       <div className='imgParent'>
           <img className='img' src={cart} alt="box" />
       </div>
@@ -81,7 +112,11 @@ function Home() {
           </Col>
           <Col>
 
-      <Card className='hmCardStyle' style={{ width: '18rem'}}>
+      <Card
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1000"
+      className='hmCardStyle' style={{ width: '18rem'}}>
       <div className='imgParent'>
           <img className='img' src={coin} alt="box" />
       </div>
@@ -94,7 +129,11 @@ function Home() {
           </Col>
           <Col>
 
-      <Card className='hmCardStyle' style={{ width: '18rem'}}>
+      <Card
+      data-aos="fade-up"
+      data-aos-delay="400"
+      data-aos-duration="1000"
+       className='hmCardStyle' style={{ width: '18rem'}}>
       <div className='imgParent'>
           <img className='img'  src={box} alt="box" />
       </div>
@@ -130,88 +169,26 @@ function Home() {
         <div className='hm-pd-search'>
         <Row>
           <Col>
-          <Nav variant="pills" defaultActiveKey="#">
-          <Nav.Item>
-              <Nav.Link href="#">Headphone</Nav.Link>
-              </Nav.Item>
-            <Nav.Item>
-            <Nav.Link eventKey="link-1" href="#airconditioner">Air Conditioner</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-            <Nav.Link eventKey="link-2" href="#television">Television</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-            <Nav.Link eventKey="link-3" href="#router">Router</Nav.Link>
-            </Nav.Item>
-        </Nav>
+          <Category/>
           </Col>
           <Col>
-          <InputGroup className="mb-3">
-        <Form.Control
-          placeholder="Search"
-          aria-label="Search"
-          aria-describedby="basic-addon2"
-        />
-        <Button variant="primary" id="button-addon2">
-          <img className='hm-search-size' src={searchicon} alt='btn-search'/>
-        </Button>
-      </InputGroup>
+        <Search/>
           </Col>
         </Row>
         </div>
 
         <Row> 
-        <Col>
-    <Card className='card-rad' style={{ width: '18rem'}}>
-      <div className='m-3 '>
-    <Card.Text className='card-txt1'>AIAIAI-TMA-1</Card.Text>
-    <Card.Text className='card-txt2'>{'Rp '}300000{',00'}</Card.Text>
-      </div>
-    <Card.Img variant="top" src={example} />
-    <Card.Body>
-    <div className='card-btn'>
-        <Button variant="primary">Detail</Button>{' '}
-        <Button variant='outline-primary'>
-          Add to Cart
-          </Button>{''}
-      </div>
-    </Card.Body>
-  </Card>
-  </Col>
-  
-  <Col>
-    <Card className='card-rad' style={{ width: '18rem'}}>
-      <div className='m-3 '>
-    <Card.Text className='card-txt1'>AIAIAI-TMA-1</Card.Text>
-    <Card.Text className='card-txt2'>{'Rp '}300000{',00'}</Card.Text>
-      </div>
-    <Card.Img variant="top" src={example} />
-    <Card.Body>
-    <div className='card-btn'>
-        <Button variant="primary">Detail</Button>{' '}
-        <Button variant="outline-primary">Add to Cart</Button>{' '}
-      </div>
-    </Card.Body>
-  </Card>
-  </Col>
-
-  <Col>
-    <Card className='card-rad' style={{ width: '18rem'}}>
-      <div className='m-3 '>
-    <Card.Text className='card-txt1'>AIAIAI-TMA-1</Card.Text>
-    <Card.Text className='card-txt2'>{'Rp '}300000{',00'}</Card.Text>
-      </div>
-    <Card.Img variant="top" src={example} />
-    <Card.Body>
-    <div className='card-btn'>
-        <Button variant="primary">Detail</Button>{' '}
-        <Button variant="outline-primary">Add to Cart</Button>{' '}
-      </div>
-    </Card.Body>
-  </Card>
-  </Col>
-
-  </Row>
+      {best.map((v) => {
+        return (
+          <Cards
+          id={v.id}
+          name={v.name}
+          price={v.price}
+          image={v.image}
+          />
+        )
+      })}
+        </Row>
        </div>
        </div>
       </Container>

@@ -30,3 +30,10 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.card-img-prop {
+    height: 277px;
+    width: 255px;
+    border-radius: 0px;
+
+}
