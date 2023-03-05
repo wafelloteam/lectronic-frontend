@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./signin.css";
 import pict from "../../assets/image/Sign in.png";
 import userpict from "../../assets/icon/baseline_person_outline_black_24dp.png";
@@ -13,9 +13,47 @@ import {
   InputGroup,
   Navbar,
   Row,
+  Alert,
 } from "react-bootstrap";
 
-function Register() {
+import { useNavigate } from "react-router-dom";
+
+import useApi from "../../helpers/useApi";
+
+const Register = () => {
+  const api = useApi();
+  const navigate = useNavigate();
+  const [User, setUser] = useState({
+    full_name: "",
+    email: "",
+    password: "",
+  });
+
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const onChangeInput = (event) => {
+    event.preventDefault();
+    const data = { ...User };
+    data[event.target.name] = event.target.value;
+    setUser(data);
+  };
+
+  const register = () => {
+    api
+      .requests({
+        method: "POST",
+        url: "/auth/register",
+        data: User,
+      })
+      .then((res) => {
+        navigate("/login");
+      })
+      .catch((err) => {
+        const errorMessage = err.response.data.description;
+        setErrorMessage(errorMessage);
+      });
+  };
+
   return (
     <div>
       <Container className="sign-contr">
@@ -49,9 +87,11 @@ function Register() {
                 <img src={userpict} alt="username"></img>
               </InputGroup.Text>
               <Form.Control
-                placeholder="Username"
+                placeholder="Full Name"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
+                onChange={onChangeInput}
+                name="full_name"
               />
             </InputGroup>
             <InputGroup className="mb-3">
@@ -63,6 +103,8 @@ function Register() {
                 placeholder="Email"
                 aria-label="Email"
                 aria-describedby="basic-addon1"
+                onChange={onChangeInput}
+                name="email"
               />
             </InputGroup>
             <InputGroup className="mb-3">
@@ -75,10 +117,18 @@ function Register() {
                 placeholder="Password"
                 aria-label="Password"
                 aria-describedby="basic-addon1"
+                onChange={onChangeInput}
+                name="password"
               />
             </InputGroup>
             <div className="sign-btn">
-              <Button variant="primary">Register</Button>{" "}
+              <Button variant="primary" onClick={register}>
+                Register
+              </Button>{" "}
+            </div>
+            {/* Error message */}
+            <div>
+              {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
             </div>
           </Col>
           <Col>
@@ -90,6 +140,6 @@ function Register() {
       </Container>
     </div>
   );
-}
+};
 
 export default Register;
