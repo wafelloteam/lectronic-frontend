@@ -1,17 +1,18 @@
 import React from 'react'
 import './cards.css'
-import pictprod from '../../assets/image/AIAIAI-TMA-1.jpg'
-import { Button, Card, Col } from 'react-bootstrap'
+import { Button, Card, Col, Container } from 'react-bootstrap'
 
-function Cards() {
+function Cards(props) {
   return (
-    <Col>
+    <Col className="col-md-4">
     <Card className='m-5 card-rad' style={{ width: '18rem'}}>
-      <div className='m-3 '>
-    <Card.Text className='card-txt1'>AIAIAI-TMA-1</Card.Text>
-    <Card.Text className='card-txt2'>{'Rp '}300000{',00'}</Card.Text>
+      <div className='m-3 contaner'>
+    <Card.Text className='card-txt1'>{props.name}</Card.Text>
+    <Card.Text className='card-txt2'>{'Rp. '}{props.price}{'.00'}</Card.Text>
       </div>
-    <Card.Img variant="top" src={pictprod} />
+      <Container className='d-flex justify-content-center'>
+    <Card.Img className='card-img-prop' variant="top" src={props.image} />
+    </Container>
     <Card.Body>
     <div className='card-btn'>
         <Button variant="primary">Detail</Button>{' '}

@@ -4,15 +4,28 @@ import pict from '../../assets/image/Sign in.png'
 import userpict from '../../assets/icon/baseline_person_outline_black_24dp.png'
 import passpict from '../../assets/icon/baseline_vpn_key_black_24dp.png'
 import emailpict from '../../assets/icon/baseline_mail_outline_black_24dp.png'
-import { Button, Col, Container, Form, InputGroup, Row } from 'react-bootstrap'
+import back from '../../assets/icon/back.png'
+import { Button, Col, Container, Form, InputGroup, Navbar, Row } from 'react-bootstrap'
 
 
 function Register() {
   return (
     <div>
+      
         <Container className='sign-contr'>
             <Row>
             <Col className='sign-col'>
+              
+            <Navbar>
+      <Container>
+        <Navbar.Brand href="/"> <img className='nav-img-size' src={back} alt="tombol-back" /> </Navbar.Brand>
+      </Container>
+    </Navbar>
+
+    <br/>
+    <br/>
+    <br/>
+
             <h1>Welcome, Please</h1>
             <h1>Create an Account</h1>
             <p className='sign-fontclr'>Please fill in your name, email and password</p>

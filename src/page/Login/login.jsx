@@ -2,7 +2,8 @@ import React from 'react'
 import pict from '../../assets/image/login.png'
 import email from '../../assets/icon/baseline_mail_outline_black_24dp.png'
 import passpict from '../../assets/icon/baseline_vpn_key_black_24dp.png'
-import { Button, Col, Container, Form, InputGroup, Row } from 'react-bootstrap'
+import back from '../../assets/icon/back.png'
+import { Button, Col, Container, Form, InputGroup, Navbar, Row } from 'react-bootstrap'
 
 //? untuk styling ngambil dari classname punya register gaes
 
@@ -14,6 +15,17 @@ function Login() {
         <Container className='login-margn'>
             <Row>
             <Col className='sign-col'>
+
+            <Navbar>
+      <Container>
+        <Navbar.Brand href="/"> <img className='nav-img-size' src={back} alt="tombol-back" /> </Navbar.Brand>
+      </Container>
+    </Navbar>
+
+    <br/>
+    <br/>
+    <br/>
+
             <h1>Welcome Back!</h1>
             <p className='sign-fontclr'>Steps to get started, find the best stuff.</p>
 
