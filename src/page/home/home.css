@@ -178,3 +178,12 @@ height: auto;
 .hm-pd-search {
     margin-bottom: 50px;
 }
+
+.scroll-container {
+   overflow-y: auto;
+    scroll-snap-type: mandatory;
+}
+
+.scroll-area {
+    scroll-snap-align: start;
+}
