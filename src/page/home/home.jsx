@@ -45,21 +45,21 @@ function Home() {
         <NavigationBar/>
         <Container className='algn-txt'>
            <Row>
-            <Col className='hm-ld-txt'>
-            <h1 className='hm-font-header'>Take Your Time</h1>
-            <h1 className='hm-font-header'>And <span className='hm-shop-clr' >Shop</span></h1>
-            <h1 className='hm-font-header' >Anywhere</h1>
-            <p className='hm-font-desc'>
+            <Col  className='hm-ld-txt'>
+            <h1 data-aos="fade-right"  data-aos-delay="0" data-aos-duration="1000" className='hm-font-header'>Take Your Time</h1>
+            <h1 data-aos="fade-right"  data-aos-delay="200" data-aos-duration="1000" className='hm-font-header'>And <span className='hm-shop-clr' >Shop</span></h1>
+            <h1 data-aos="fade-right"  data-aos-delay="400" data-aos-duration="1000" className='hm-font-header' >Anywhere</h1>
+            <p data-aos="fade-right"  data-aos-delay="600" data-aos-duration="1000" className='hm-font-desc'>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
                 officia consequat duis enim velit mollit..
               </p>
-              <div>
+              <div data-aos="fade-right"  data-aos-delay="800" data-aos-duration="1000">
               <Button variant="primary">Shop Now</Button>{' '}
               <Button variant="outline-primary">Be a Seller</Button>{' '}
               </div>
             </Col>
             <Col>
-            <Container>
+            <Container data-aos="fade-up" data-aos-duration="2000">
             <img 
             className='hm-bg'
             src={pict}
@@ -76,7 +76,7 @@ function Home() {
 
     <div>
     <Container>
-       <div  >
+       <div data-aos="fade-up" data-aos-duration="2000" >
        <Card
        className='hm-cr'
          bg={'light'}
@@ -98,7 +98,7 @@ function Home() {
 
       <Card 
       data-aos="fade-up"
-      data-aos-delay="0"
+      data-aos-delay="0" 
       data-aos-duration="1000"
       className='hmCardStyle' style={{ width: '18rem'}}>
       <div className='imgParent'>
@@ -152,7 +152,7 @@ function Home() {
 
     <div>
       <Container>
-      <div  >
+      <div data-aos="fade-up" data-aos-duration="2000" >
        <Card
        className='hm-cr'
          bg={'light'}
