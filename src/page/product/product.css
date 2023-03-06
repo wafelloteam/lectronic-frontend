@@ -2,7 +2,7 @@
 .prod-dspl {
     display: flex;
     justify-content: center;
-    width: 800px;
+    width: 1030px;
     
 }
 
@@ -38,4 +38,8 @@
     margin-left: 30px;
     background-color: white;
     box-shadow: 5px 4px 50px rgba(3, 0, 173, 0.2);
+}
+
+.prod-category {
+    margin-left: 55px;
 }

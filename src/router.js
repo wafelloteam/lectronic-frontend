@@ -3,6 +3,8 @@ import Home from "./page/home/home"
 import Register from "./page/register/signin"
 import Login from "./page/Login/login"
 import Product from "./page/product/product"
+import About from "./page/about/about"
+import Detail from "./page/detail/detail"
 import Underconstruct from "./page/underconstruct/underconstruct"
 import PrivateRoutes from "./helpers/privateroute"
 import ForgetPassword from "./page/forget-password/forget-password"
@@ -30,8 +32,11 @@ function router() {
         <Route path="/product" element={<Product/>} />
         <Route path="/forget-password" element={<ForgetPassword/>} />
         <Route path="/auth/update-password/:id" element={<UpdatePassword/>} />
+        <Route path="/about" element={<About/>}/>
+        <Route path="/detail/:slug" element={<Detail/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="" element='' />
+        
     </Routes>
     </BrowserRouter>
   )

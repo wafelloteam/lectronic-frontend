@@ -76,13 +76,24 @@ function Home() {
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                   amet sint. Velit officia consequat duis enim velit mollit..
                 </p>
-                <div
-                  data-aos="fade-right"
-                  data-aos-delay="800"
-                  data-aos-duration="1000"
-                >
-                  <Button variant="primary">Shop Now</Button>{" "}
-                  <Button variant="outline-primary">Be a Seller</Button>{" "}
+                <div>
+                  <Button
+                    data-aos="fade-right"
+                    data-aos-delay="800"
+                    data-aos-duration="1000"
+                    variant="primary"
+                    className="hm-clr-btn"
+                  >
+                    Shop Now
+                  </Button>{" "}
+                  <Button
+                    data-aos="fade-left"
+                    data-aos-delay="800"
+                    data-aos-duration="1000"
+                    variant="outline-primary"
+                  >
+                    Be a Seller
+                  </Button>{" "}
                 </div>
               </Col>
               <Col>
@@ -117,7 +128,7 @@ function Home() {
                 <Col>
                   <Card
                     data-aos="fade-up"
-                    data-aos-delay="0"
+                    data-aos-delay="100"
                     data-aos-duration="1500"
                     className="hmCardStyle"
                     style={{ width: "18rem" }}
@@ -221,6 +232,7 @@ function Home() {
                         name={v.name}
                         price={v.price}
                         image={v.image}
+                        slug={v.slug}
                       />
                     );
                   })}

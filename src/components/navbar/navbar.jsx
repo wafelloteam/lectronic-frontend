@@ -18,7 +18,7 @@ function NavigationBar() {
         method: "GET",
         url: "/user/id",
       });
-      console.log(data)
+      console.log(data);
       dispatch(setData(data.data));
     } catch (error) {
       console.log(error);
@@ -62,19 +62,29 @@ function NavigationBar() {
                 <Nav.Link href="/product">Product</Nav.Link>
               </Col>
               <Col className="nv-margin-right">
-                <Nav.Link href="/underconstruct">Community</Nav.Link>
+                <Nav.Link href="/detail">Community</Nav.Link>
               </Col>
               <Col>
-                <Nav.Link href="/underconstruct">About</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
               </Col>
             </Row>
 
             {!isAuth ? (
               <div>
-                <Button href="/login" variant="primary" size="large">
+                <Button
+                  className="hm-clr-btn"
+                  href="/login"
+                  variant="primary"
+                  size="large"
+                >
                   Login
                 </Button>{" "}
-                <Button href="/register" variant="primary" size="large">
+                <Button
+                  className="hm-clr-btn"
+                  href="/register"
+                  variant="primary"
+                  size="large"
+                >
                   Sign Up
                 </Button>{" "}
               </div>
@@ -83,11 +93,7 @@ function NavigationBar() {
                 <Button href="/login" variant="primary" size="large">
                   Welcome {full_name}
                 </Button>{" "}
-                <Button
-                  onClick={doLogout}
-                  variant="primary"
-                  size="large"
-                >
+                <Button onClick={doLogout} variant="primary" size="large">
                   Logout
                 </Button>{" "}
               </div>
