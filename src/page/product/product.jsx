@@ -12,8 +12,10 @@ import useApi from "../../helpers/useApi";
 function Product() {
   const api = useApi();
   const [product, setProduct] = useState([]);
+  const [searchKeyword, setSearchKeyword] = useState("");
+  const [filterCategory, setFilterCategory] = useState("");
 
-  const getBest = async () => {
+  const getAll = async () => {
     try {
       const { data } = await api.requests({
         method: "GET",
@@ -25,10 +27,38 @@ function Product() {
     }
   };
 
+  const getSearch = async (search = "") => {
+    try {
+      const { data } = await api.requests({
+        method: "GET",
+        url: `/product/search?s=${search}`,
+      });
+      setProduct(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getCategory = async (category = "") => {
+    try {
+      const { data } = await api.requests({
+        method: "GET",
+        url: `/product/category/${category}`,
+      });
+      setProduct(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    getBest();
+    getCategory(filterCategory);
+  }, [filterCategory]);
+
+  useEffect(() => {
+    getAll();
   }, []);
-  
+
   return (
     <div>
       <NavbarAuth />
@@ -41,8 +71,14 @@ function Product() {
                   placeholder="Search"
                   aria-label="Search"
                   aria-describedby="basic-addon2"
+                  value={searchKeyword}
+                  onChange={(e) => setSearchKeyword(e.target.value)}
                 />
-                <Button variant="primary" id="button-addon2">
+                <Button
+                  variant="primary"
+                  id="button-addon2"
+                  onClick={() => getSearch(searchKeyword)}
+                >
                   <img
                     className="prod-search-size"
                     src={searchicon}
@@ -66,12 +102,19 @@ function Product() {
           </Container>
         </Row>
         <Row className="prod-category">
-        <Category/>
+          <Category handleFilter={setFilterCategory} />
         </Row>
         <Row>
           {product.map((v) => {
             return (
-              <Cards id={v.id} name={v.name} price={v.price} image={v.image} slug={v.slug} />
+              <Cards
+                id={v.id}
+                name={v.name}
+                price={v.price}
+                image={v.image}
+                slug={v.slug}
+                category={v.category}
+              />
             );
           })}
         </Row>
