@@ -17,7 +17,7 @@ function Product() {
     try {
       const { data } = await api.requests({
         method: "GET",
-        url: "/vehicle/",
+        url: "/product/all",
       });
       setProduct(data.data);
     } catch (error) {

@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.css";
 import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import iconbar from "../../assets/icon/Logo.png";
-
+import Profile from "../profile/profile";
 import { useDispatch, useSelector } from "react-redux";
-import { logout, setData } from "../../store/reducer/user";
+import { setData } from "../../store/reducer/user";
 import useApi from "../../helpers/useApi";
 
 function NavigationBar() {
-  const { isAuth, data } = useSelector((state) => state.user);
+  const [profile, setProfile] = useState([])
+  const { isAuth} = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const api = useApi();
 
@@ -19,6 +20,7 @@ function NavigationBar() {
         url: "/user/id",
       });
       console.log(data);
+      setProfile(data)
       dispatch(setData(data.data));
     } catch (error) {
       console.log(error);
@@ -31,11 +33,7 @@ function NavigationBar() {
     }
   }, [isAuth]);
 
-  const doLogout = () => {
-    dispatch(logout(data.token));
-  };
 
-  const full_name = data.full_name || "default";
 
   return (
     <>
@@ -90,12 +88,16 @@ function NavigationBar() {
               </div>
             ) : (
               <div>
-                <Button href="/login" variant="primary" size="large">
-                  Welcome {full_name}
-                </Button>{" "}
-                <Button onClick={doLogout} variant="primary" size="large">
-                  Logout
-                </Button>{" "}
+                {profile.map((v) => {
+                  return(
+                    <Profile
+                      id={v.id}
+                      image={v.image}
+                      name={v.full_name}
+                    />
+                  )
+                })}
+                
               </div>
             )}
           </Container>

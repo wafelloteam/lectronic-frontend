@@ -19,6 +19,19 @@ import {
 
 function Detail() {
   const [detail, setDetail] = useState("detail");
+  const [num, setNum] = useState(1)
+
+    function incrementCount() {
+        setNum(num + 1)
+    }
+
+    function decrementCount() {
+        if (num === 0) {
+            setNum(0)
+        } else {
+            setNum(num - 1)
+        }
+    }
 
   useEffect(() => {
     AOS.init();
@@ -98,11 +111,20 @@ function Detail() {
                           Details
                         </Card.Title>
                       </Row>
+               
                       <Row>
+                        <Container className="detail-counter">
+                        <div className="wrapper">
+                          <button onClick={incrementCount} type="button" className="btn btn-light dtl-btn-count">+</button>
+                          <span className="pnumber">{num}</span>
+                          <button onClick={decrementCount} type="button" className="btn btn-light dtl-btn-count">-</button>
+                        </div>
                         <Card.Title className="detail-card2-line2 ">
                           Stock 5
                         </Card.Title>
+                        </Container>
                       </Row>
+                      <br/>
                       <Row>
                         <Card.Text className="detail-card2-lineii">
                           Add Notes
@@ -119,8 +141,7 @@ function Detail() {
                           </Card.Text>
                         </Container>
                       </Row>
-                      <br />
-                      <br />
+                      
                       <Row>
                         <Card.Body>
                           <div className="card-btn">
