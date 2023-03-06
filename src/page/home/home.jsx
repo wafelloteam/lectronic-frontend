@@ -232,6 +232,7 @@ function Home() {
                         name={v.name}
                         price={v.price}
                         image={v.image}
+                        slug={v.slug}
                       />
                     );
                   })}
