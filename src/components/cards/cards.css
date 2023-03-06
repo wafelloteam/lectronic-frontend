@@ -34,6 +34,11 @@
 .card-img-prop {
     height: 277px;
     width: 255px;
-    border-radius: 0px;
+    border-radius: 10px;
 
+}
+
+.crd-btn-clr {
+    background: #0300AD;
+    --bs-btn-border-color: #0300AD;
 }

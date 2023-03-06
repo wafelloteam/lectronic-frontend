@@ -18,7 +18,7 @@ function NavigationBar() {
         method: "GET",
         url: "/user/id",
       });
-      console.log(data)
+      console.log(data);
       dispatch(setData(data.data));
     } catch (error) {
       console.log(error);
@@ -71,10 +71,20 @@ function NavigationBar() {
 
             {!isAuth ? (
               <div>
-                <Button href="/login" variant="primary" size="large">
+                <Button
+                  className="hm-clr-btn"
+                  href="/login"
+                  variant="primary"
+                  size="large"
+                >
                   Login
                 </Button>{" "}
-                <Button href="/register" variant="primary" size="large">
+                <Button
+                  className="hm-clr-btn"
+                  href="/register"
+                  variant="primary"
+                  size="large"
+                >
                   Sign Up
                 </Button>{" "}
               </div>
@@ -83,11 +93,7 @@ function NavigationBar() {
                 <Button href="/login" variant="primary" size="large">
                   Welcome {full_name}
                 </Button>{" "}
-                <Button
-                  onClick={doLogout}
-                  variant="primary"
-                  size="large"
-                >
+                <Button onClick={doLogout} variant="primary" size="large">
                   Logout
                 </Button>{" "}
               </div>

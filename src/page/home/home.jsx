@@ -82,6 +82,7 @@ function Home() {
                     data-aos-delay="800"
                     data-aos-duration="1000"
                     variant="primary"
+                    className="hm-clr-btn"
                   >
                     Shop Now
                   </Button>{" "}

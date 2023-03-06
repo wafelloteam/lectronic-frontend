@@ -19,7 +19,7 @@ function Cards(props) {
         </Container>
         <Card.Body>
           <div className="card-btn">
-            <Button variant="primary">Detail</Button>{" "}
+            <Button className="crd-btn-clr">Detail</Button>{" "}
             <Button variant="outline-primary">Add to Cart</Button>{" "}
           </div>
         </Card.Body>

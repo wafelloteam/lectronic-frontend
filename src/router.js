@@ -31,8 +31,8 @@ function router() {
         <Route path="/product" element={<Product/>} />
         <Route path="/forget-password" element={<ForgetPassword/>} />
         <Route path="/auth/update-password/:id" element={<UpdatePassword/>} />
-        <Route path="" element='' />
-        <Route path="" element='' />
+        <Route path="/about" element={<About/>}/>
+        <Route path="/detail" element={<Detail/>} />
     </Routes>
     </BrowserRouter>
   )
