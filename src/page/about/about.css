@@ -1,0 +1,62 @@
+.about-bg {
+    background: #edf2fa
+}
+
+.about-img-parent {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-role-title {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: large;
+}
+
+.about-card-title {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: medium;
+    color: rgb(245, 72, 9);
+}
+
+.about-sub {
+    font-family: Nunito;
+    font-weight: normal;
+    font-size: small;
+}
+
+.about-card-style{
+    width: 386px;
+    height: 350px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-size: 18px;
+    background: white;
+    box-shadow: 5px 4px 50px rgba(3, 0, 173, 0.2);
+    border-radius: 20px;
+    margin-left: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+/* .about-card-style:hover {
+    background:#e7e7f0;
+    transform: scale(1.1);
+    transition-duration: 1.5s;
+    
+} */
+

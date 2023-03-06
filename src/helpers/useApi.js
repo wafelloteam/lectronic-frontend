@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 // import { useSelector } from 'react-redux'
-import env from 'react-dotenv'
 import axios from 'axios'
 
 function useApi(urls = '') {
@@ -8,7 +7,7 @@ function useApi(urls = '') {
     const token = ''
 
     const [requests, setRequests] = useState({
-        baseURL: env.BASE_API_URL || urls,
+        baseURL: process.env.REACT_APP_BASE_API_URL || urls,
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`
