@@ -62,10 +62,10 @@ function NavigationBar() {
                 <Nav.Link href="/product">Product</Nav.Link>
               </Col>
               <Col className="nv-margin-right">
-                <Nav.Link href="/underconstruct">Community</Nav.Link>
+                <Nav.Link href="/detail">Community</Nav.Link>
               </Col>
               <Col>
-                <Nav.Link href="/underconstruct">About</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
               </Col>
             </Row>
 

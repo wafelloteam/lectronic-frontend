@@ -180,10 +180,11 @@ height: auto;
 }
 
 .scroll-container {
-   overflow-y: auto;
-    scroll-snap-type: mandatory;
+   overflow: auto;
+    scroll-snap-type: y mandatory;
 }
 
 .scroll-area {
     scroll-snap-align: start;
+    scroll-snap-stop:always;
 }

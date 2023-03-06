@@ -65,7 +65,9 @@ function Product() {
             </div>
           </Container>
         </Row>
-        <Category />
+        <Row className="prod-category">
+        <Category/>
+        </Row>
         <Row>
           {product.map((v) => {
             return (

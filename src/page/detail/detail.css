@@ -1,0 +1,9 @@
+.detail-card2-line1 {
+    display: flex;
+    justify-content: center;
+}
+
+.detail-card2-line2 {
+    display: flex;
+    justify-content:end;
+}
