@@ -3,7 +3,7 @@ import "./detail.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import cart from "../../assets/icon/shopping_cart.png";
-import NavbarAuth from "../../components/navbarAuth/navbarauth";
+import NavbarAuth from "../../components/navbarAuth/navdetail";
 import picture from "../../assets/image/AIAIAI-TMA-1.jpg";
 import Footer from "../../components/footer/footer";
 import {
@@ -41,6 +41,44 @@ function Detail() {
                   >
                     <Container className="d-flex">
                       <Card.Img src={picture} alt="img-detail" />
+                    </Container>
+                    <br />
+                    <Container className="detail-container-imagekecil">
+                      <Card
+                        className="detil-image-kecil"
+                        style={{ width: "5rem", height: "5rem" }}
+                      >
+                        <Container className="d-flex">
+                          <Card.Img src={picture} alt="img-detail" />
+                        </Container>
+                      </Card>
+
+                      <Card
+                        className="detil-image-kecil"
+                        style={{ width: "5rem", height: "5rem" }}
+                      >
+                        <Container className="d-flex">
+                          <Card.Img src={picture} alt="img-detail" />
+                        </Container>
+                      </Card>
+
+                      <Card
+                        className="detil-image-kecil"
+                        style={{ width: "5rem", height: "5rem" }}
+                      >
+                        <Container className="d-flex">
+                          <Card.Img src={picture} alt="img-detail" />
+                        </Container>
+                      </Card>
+
+                      <Card
+                        className="detil-image-kecil"
+                        style={{ width: "5rem", height: "5rem" }}
+                      >
+                        <Container className="d-flex">
+                          <Card.Img src={picture} alt="img-detail" />
+                        </Container>
+                      </Card>
                     </Container>
                   </Card>
                 </div>
