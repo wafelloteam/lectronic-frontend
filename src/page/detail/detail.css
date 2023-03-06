@@ -3,7 +3,72 @@
     justify-content: center;
 }
 
+.detail-card-prop {
+    border-radius: 20px;
+    justify-content: center;
+    box-shadow: 5px 4px 50px rgba(3, 0, 173, 0.2);
+
+}
+
+
 .detail-card2-line2 {
     display: flex;
-    justify-content:end;
+    justify-content:flex-end;
+    font-family: Nunito;
+}
+
+.detail-card2-lineii {
+    display: flex;
+    justify-content:flex-start;
+    font-family: Nunito;
+}
+
+.detail-card2-line3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.dtl-width {
+    width: 640px;
+}
+
+.btn-dtl {
+    background: #0300AD;
+    height: auto;
+    width: 160px;
+    border-radius: 20px;
+}
+
+.card-inside-review {
+    border-radius: 20px;
+    box-shadow: 5px 4px 10px rgba(3, 0, 173, 0.2);
+
+}
+
+.detail-review-prop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.detail-review-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.detail-font-prop {
+    font-family: Nunito;
+    font-weight: bold;
+}
+
+.detail-price {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.detail-nunito {
+    font-family: Nunito;
 }

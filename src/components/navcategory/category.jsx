@@ -1,9 +1,10 @@
 import React from "react";
+import './category.css'
 import { Nav } from "react-bootstrap";
 
 function Category() {
   return (
-    <Nav variant="pills" defaultActiveKey="#">
+    <Nav className="navcat-bg" variant="pills" defaultActiveKey="#">
       <Nav.Item>
         <Nav.Link href="#">Headphone</Nav.Link>
       </Nav.Item>

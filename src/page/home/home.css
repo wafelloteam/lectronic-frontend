@@ -37,7 +37,7 @@
 }
 
 .hm-shop-clr {
-    color: blue;
+    color: #0300AD;
 }
 
 .hm-bg {
@@ -187,4 +187,9 @@ height: auto;
 .scroll-area {
     scroll-snap-align: start;
     scroll-snap-stop:always;
+}
+
+.hm-clr-btn {
+    background: #0300AD;
+    --bs-btn-border-color: #0300AD;
 }
