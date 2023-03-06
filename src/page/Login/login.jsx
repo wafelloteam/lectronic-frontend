@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import pict from "../../assets/image/login.png";
 import email from "../../assets/icon/baseline_mail_outline_black_24dp.png";
 import passpict from "../../assets/icon/baseline_vpn_key_black_24dp.png";
@@ -11,11 +11,57 @@ import {
   InputGroup,
   Navbar,
   Row,
+  Alert
 } from "react-bootstrap";
+
+import { useNavigate } from "react-router-dom";
+import useApi from "../../helpers/useApi";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../store/reducer/user";
 
 //? untuk styling ngambil dari classname punya register gaes
 
 function Login() {
+  const { isAuth } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const api = useApi();
+  const navigate = useNavigate();
+  const [User, setUser] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const onChangeInput = (event) => {
+    event.preventDefault();
+    const data = { ...User };
+    data[event.target.name] = event.target.value;
+    setUser(data);
+  };
+
+  const doLogin = () => {
+    api
+      .requests({
+        method: "POST",
+        url: "/auth/login",
+        data: User,
+      })
+      .then((res) => {
+        const { data } = res.data;
+        dispatch(login(data.token));
+      })
+      .catch((err) => {
+        const errorMessage = err.response.data.description;
+        setErrorMessage(errorMessage);
+      });
+  };
+
+  useEffect(() => {
+    if (isAuth) {
+      navigate("/");
+    }
+  }, [isAuth]);
   return (
     <div>
       <Container className="login-margn">
@@ -52,6 +98,8 @@ function Login() {
                 placeholder="Email"
                 aria-label="Email"
                 aria-describedby="basic-addon1"
+                onChange={onChangeInput}
+            name="email"
               />
             </InputGroup>
             <InputGroup className="mb-3">
@@ -64,11 +112,16 @@ function Login() {
                 placeholder="Password"
                 aria-label="Password"
                 aria-describedby="basic-addon1"
+                onChange={onChangeInput}
+            name="password"
               />
             </InputGroup>
-            <p className="sign-fontclr">Forgot Password ?</p>
+            <p className="sign-fontclr"><a href="/forget-password">Forgot Password ?</a></p>
             <div className="sign-btn">
-              <Button variant="primary">Login</Button>{" "}
+              <Button onClick={doLogin} variant="primary">Login</Button>{" "}
+            </div>
+            <div>
+              {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
             </div>
             <br />
             <br />
