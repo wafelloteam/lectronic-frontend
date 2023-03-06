@@ -32,7 +32,7 @@ function router() {
         <Route path="/forget-password" element={<ForgetPassword/>} />
         <Route path="/auth/update-password/:id" element={<UpdatePassword/>} />
         <Route path="/about" element={<About/>}/>
-        <Route path="/detail" element={<Detail/>} />
+        <Route path="/detail/:slug" element={<Detail/>} />
     </Routes>
     </BrowserRouter>
   )

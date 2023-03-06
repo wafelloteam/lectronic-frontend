@@ -17,7 +17,7 @@ function Product() {
     try {
       const { data } = await api.requests({
         method: "GET",
-        url: "/vehicle/",
+        url: "/product/all",
       });
       setProduct(data.data);
     } catch (error) {
@@ -28,7 +28,7 @@ function Product() {
   useEffect(() => {
     getBest();
   }, []);
-
+  
   return (
     <div>
       <NavbarAuth />
@@ -71,7 +71,7 @@ function Product() {
         <Row>
           {product.map((v) => {
             return (
-              <Cards id={v.id} name={v.name} price={v.price} image={v.image} />
+              <Cards id={v.id} name={v.name} price={v.price} image={v.image} slug={v.slug} />
             );
           })}
         </Row>
