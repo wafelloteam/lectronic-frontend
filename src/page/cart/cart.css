@@ -1,0 +1,183 @@
+.cart-header {
+    padding-top: 36px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    color: #333333;
+}
+
+.check-false {
+    box-sizing: border-box;
+
+    width: 50px;
+    height: 50px;
+
+    border: 2px solid #0300AD;
+    border-radius: 10px;
+}
+
+.select-all {
+    margin-left: 50px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 140%;
+    /* identical to box height, or 56px */
+
+    letter-spacing: 0.03em;
+
+    color: #333333;
+}
+
+#check{
+    margin-bottom: 68px;
+    margin-top: 72px;
+}
+
+#cart-list {
+    padding-left: 35px;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    background: #FFFFFF;
+    /* Shadow/card */
+
+    box-shadow: 0px 0px 60px rgba(45, 45, 45, 0.1);
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.cart-image {
+    margin-left: 40px;
+    height: 116px;
+    width: 116px;
+    background: #F5F9FA;
+    border-radius: 10px;
+}
+
+.row-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-cart {
+    width: 60%;
+}
+
+#total-checkout {
+    padding-left: 35px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 386px;
+    background: #FFFFFF;
+    width: 38%;
+    /* Shadow/card */
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 60px rgba(45, 45, 45, 0.1);
+    border-radius: 20px;
+}
+
+#total-checkout > .total {
+    margin-bottom: 30px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 140%;
+    /* identical to box height, or 56px */
+
+    letter-spacing: 0.03em;
+
+    color: #333333; 
+}
+
+#total-checkout > .item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row > * {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#total-checkout > .item > .left {
+    padding-bottom: 17px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    /* identical to box height, or 31px */
+
+    letter-spacing: 0.03em;
+
+    color: #000000;
+}
+
+#total-checkout > .item > .price {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 160%;
+    /* identical to box height, or 29px */
+
+    letter-spacing: 0.03em;
+
+    color: #777777;
+}
+
+#total-checkout  > .bill {
+    display: flex;
+    justify-content: space-between;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 140%;
+    /* or 36px */
+
+    letter-spacing: 0.03em;
+
+    color: #333333;
+}
+
+.checkout-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    width: 297px;
+    height: 59px;
+    background: #0300AD;
+    border-radius: 10px;
+}
+
+.checkout-btn > .text{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 140%;
+    /* or 25px */
+
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

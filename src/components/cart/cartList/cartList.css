@@ -1,0 +1,63 @@
+.carts {
+    width: 116px;
+    height: 116px;
+    object-fit: cover;
+}
+
+.cart-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    justify-content: flex-start;
+}
+
+.prod-name {
+    margin-bottom: 16px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    /* identical to box height, or 31px */
+
+    letter-spacing: 0.03em;
+
+    color: #333333;
+}
+
+.category-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 160%;
+    /* or 19px */
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
+        width: 85px;
+    height: 30px;
+
+    background: #0300AD;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+.prod-price {
+    margin-top: 16px;
+    font-family: Nunito;
+    font-style: normal;                     
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+    /* identical to box height, or 31px */
+
+    letter-spacing: 0.02em;
+
+    color: #0300AD; 
+}

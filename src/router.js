@@ -9,6 +9,7 @@ import Underconstruct from "./page/underconstruct/underconstruct"
 import PrivateRoutes from "./helpers/privateroute"
 import ForgetPassword from "./page/forget-password/forget-password"
 import UpdatePassword from "./page/update-password/update-password"
+import Cart from "./page/cart/cart"
 
 
 
@@ -33,6 +34,9 @@ function router() {
         <Route path="/auth/update-password/:id" element={<UpdatePassword/>} />
         <Route path="/about" element={<About/>}/>
         <Route path="/detail/:slug" element={<Detail/>} />
+        <Route path="/cart" element={<Cart/>} />
+        <Route path="" element='' />
+        
     </Routes>
     </BrowserRouter>
   )
