@@ -2,7 +2,6 @@ import React from "react";
 import "./cards.css";
 import { Button, Card, Col, Container } from "react-bootstrap";
 import CurrencyFormat from "react-currency-format";
-import { Link } from 'react-router-dom'
 
 function Cards(props) {
   return (
@@ -25,8 +24,8 @@ function Cards(props) {
         </Container>
         <Card.Body>
           <div className="card-btn">
-          <Link to={`/detail/${props.slug}`}><Button className="crd-btn-clr">Detail</Button>{" "}</Link>
-            <Button variant="outline-primary">Add to Cart</Button>{" "}
+          <Button href={`/detail/${props.slug}`} className="crd-btn-clr">Detail</Button>
+            <Button variant="outline-primary">Add to Cart</Button>
           </div>
         </Card.Body>
       </Card>

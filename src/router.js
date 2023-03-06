@@ -20,9 +20,10 @@ function router() {
     <Route path="/" element={<Home/>} />
 
         <Route element={<PrivateRoutes/>}>
-        <Route path="" element='' />
-        <Route path="" element='' />
-        <Route path="" element='' />
+          <Route path="/cart" element={<Cart/>} />
+          <Route path="" element='' />
+          <Route path="" element='' />
+          <Route path="" element='' />
         </Route>
 
         
@@ -34,8 +35,7 @@ function router() {
         <Route path="/auth/update-password/:id" element={<UpdatePassword/>} />
         <Route path="/about" element={<About/>}/>
         <Route path="/detail/:slug" element={<Detail/>} />
-        <Route path="/cart" element={<Cart/>} />
-        <Route path="" element='' />
+        
         
     </Routes>
     </BrowserRouter>

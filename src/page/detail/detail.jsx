@@ -52,8 +52,9 @@ function Detail() {
     }
 
   useEffect(() => {
-    getData();
     AOS.init();
+    getData();
+    
   }, []);
 
 
@@ -149,7 +150,7 @@ function Detail() {
                         <Card.Text className="detail-card2-lineii">
                           Add Notes
                         </Card.Text>
-                      </Row> */}
+                      </Row>
                       <br />
                       <Row>
                         <Container className="detail-card2-line3">
@@ -228,7 +229,7 @@ function Detail() {
                       </p>
                     </Tab>
                     <Tab
-                      ddata-aos="fade-left"
+                      data-aos="fade-left"
                       data-aos-delay="400"
                       data-aos-duration="2000"
                       eventKey="Review"
