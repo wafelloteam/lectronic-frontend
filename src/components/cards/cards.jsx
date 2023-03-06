@@ -9,7 +9,7 @@ function Cards(props) {
     <Col className="col-md-4">
       <Card className="m-5 card-rad" style={{ width: "18rem" }}>
         <div className="m-3 contaner">
-          <Card.Text className="card-txt1">{props.name}</Card.Text>
+        <Card.Text className="card-txt1"><p style={{textTransform: "capitalize"}}>{props.category}</p> {props.name}</Card.Text>
           <Card.Text className="card-txt2">
           <CurrencyFormat
               value={props.price}
