@@ -37,6 +37,19 @@ function Detail() {
       console.log(error);
     }
   }
+  const [num, setNum] = useState(1)
+
+    function incrementCount() {
+        setNum(num + 1)
+    }
+
+    function decrementCount() {
+        if (num === 0) {
+            setNum(0)
+        } else {
+            setNum(num - 1)
+        }
+    }
 
   useEffect(() => {
     getData();
@@ -118,12 +131,21 @@ function Detail() {
                           Details
                         </Card.Title>
                       </Row>
+               
                       <Row>
+                        <Container className="detail-counter">
+                        <div className="wrapper">
+                          <button onClick={incrementCount} type="button" className="btn btn-light dtl-btn-count">+</button>
+                          <span className="pnumber">{num}</span>
+                          <button onClick={decrementCount} type="button" className="btn btn-light dtl-btn-count">-</button>
+                        </div>
                         <Card.Title className="detail-card2-line2 ">
                           Stock {product.stock}
                         </Card.Title>
+                        </Container>
                       </Row>
-                      {/* <Row>
+                      <br/>
+                      <Row>
                         <Card.Text className="detail-card2-lineii">
                           Add Notes
                         </Card.Text>
@@ -145,8 +167,7 @@ function Detail() {
                           </Card.Text>
                         </Container>
                       </Row>
-                      <br />
-                      <br />
+                      
                       <Row>
                         <Card.Body>
                           <div className="card-btn">

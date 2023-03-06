@@ -86,3 +86,39 @@
   overflow: hidden;
   padding: 10px;
 }
+
+
+.detail-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.wrapper {
+    height: 40px;
+    min-width: 80px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #0300AD;
+    background: rgb(252, 251, 251);
+}
+
+.wrapper span {
+    width: 120%;
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+}
+
+.dtl-btn-count {
+    font-family: Nunito;
+    font-weight: bold;
+    color: #0300AD;
+
+}
+

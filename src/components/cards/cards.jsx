@@ -5,7 +5,6 @@ import CurrencyFormat from "react-currency-format";
 import { Link } from 'react-router-dom'
 
 function Cards(props) {
-   
   return (
     <Col className="col-md-4">
       <Card className="m-5 card-rad" style={{ width: "18rem" }}>
