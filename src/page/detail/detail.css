@@ -72,3 +72,16 @@
 .detail-nunito {
     font-family: Nunito;
 }
+
+.detil-image-kecil {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    
+}
+
+.detail-container-imagekecil {
+    display: flex;
+    justify-content: space-around;
+}

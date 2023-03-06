@@ -3,6 +3,7 @@ import "./cards.css";
 import { Button, Card, Col, Container } from "react-bootstrap";
 
 function Cards(props) {
+   
   return (
     <Col className="col-md-4">
       <Card className="m-5 card-rad" style={{ width: "18rem" }}>
@@ -19,7 +20,7 @@ function Cards(props) {
         </Container>
         <Card.Body>
           <div className="card-btn">
-            <Button className="crd-btn-clr">Detail</Button>{" "}
+            <Button href="/detail" className="crd-btn-clr">Detail</Button>{" "}
             <Button variant="outline-primary">Add to Cart</Button>{" "}
           </div>
         </Card.Body>
