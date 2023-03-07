@@ -8,7 +8,7 @@ function CheckBox() {
      <div>
     <Form >
         <div className='check'>
-          <Form.Check />
+          <Form.Check defaultChecked={true}/>
         </div>
     </Form>                                 
      </div>

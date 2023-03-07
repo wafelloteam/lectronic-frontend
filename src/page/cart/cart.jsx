@@ -8,10 +8,12 @@ import CartList from "../../components/cart/cartList/cartList";
 import useApi from "../../helpers/useApi";
 import { React, useState, useEffect } from "react";
 import CurrencyFormat from "react-currency-format";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const api = useApi();
   const [cart, setCart] = useState([]);
+  const navigate = useNavigate();
 
 
   const getCart = async () => {
@@ -36,6 +38,21 @@ function Cart() {
     (acc, curr) => acc + curr.product.price * curr.qty,
     0
   );
+
+
+  const payBills = async () => {
+    try {
+      const { data } = await api.requests({
+        method: "POST",
+        url: "/cart/payment",
+      });
+      console.log(data)
+      navigate("/thanks");
+
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div>
@@ -118,9 +135,9 @@ function Cart() {
               prefix={"Rp"}
             /></div>
             </div>
-            <div className="checkout-btn">
-              <div className="text">Check Out</div>
-            </div>
+            <Button onClick={payBills} className="checkout-btn">
+              <div className="text">Pay bills</div>
+            </Button>
           </Row>
         </div>
       </Container>
