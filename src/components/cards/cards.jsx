@@ -1,15 +1,14 @@
 import React from "react";
 import "./cards.css";
 import { Button, Card, Col, Container } from "react-bootstrap";
-import CurrencyFormat from 'react-currency-format';
-import { Link } from 'react-router-dom'
+import CurrencyFormat from "react-currency-format";
 
 function Cards(props) {
   return (
     <Col className="col-md-4">
       <Card className="m-5 card-rad" style={{ width: "18rem" }}>
         <div className="m-3 contaner">
-          <Card.Text className="card-txt1">{props.name}</Card.Text>
+        <Card.Text className="card-txt1"><p style={{textTransform: "capitalize"}}>{props.category}</p> {props.name}</Card.Text>
           <Card.Text className="card-txt2">
           <CurrencyFormat
               value={props.price}
@@ -25,8 +24,8 @@ function Cards(props) {
         </Container>
         <Card.Body>
           <div className="card-btn">
-          <Link to={`/detail/${props.slug}`}><Button className="crd-btn-clr">Detail</Button>{" "}</Link>
-            <Button variant="outline-primary">Add to Cart</Button>{" "}
+          <Button href={`/detail/${props.slug}`} className="crd-btn-clr">Detail</Button>
+            <Button variant="outline-primary">Add to Cart</Button>
           </div>
         </Card.Body>
       </Card>

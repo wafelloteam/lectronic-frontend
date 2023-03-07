@@ -21,9 +21,10 @@ function router() {
     <Route path="/" element={<Home/>} />
 
         <Route element={<PrivateRoutes/>}>
-        <Route path="" element='' />
-        <Route path="" element='' />
-        <Route path="" element='' />
+          <Route path="/cart" element={<Cart/>} />
+          <Route path="" element='' />
+          <Route path="" element='' />
+          <Route path="" element='' />
         </Route>
 
         
