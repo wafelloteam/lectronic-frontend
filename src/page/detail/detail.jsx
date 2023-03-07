@@ -15,11 +15,13 @@ import {
   Row,
   Tab,
   Tabs,
+  Alert,
 } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import CurrencyFormat from "react-currency-format";
 import useApi from "../../helpers/useApi";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Detail() {
   const api = useApi();
@@ -28,6 +30,9 @@ function Detail() {
   const [tabProduct, setTabProduct] = useState("detail");
   const [num, setNum] = useState(1);
   const navigate = useNavigate();
+  const [successMessage, setSuccessMessage] = useState("");
+  const { isAuth } = useSelector((state) => state.user);
+  const [errorMessage, setErrorMessage] = useState("");
 
   async function getData() {
     try {
@@ -49,7 +54,26 @@ function Detail() {
         data: { qty: num },
       });
       console.log(response);
-      navigate("/cart")
+      navigate("/cart");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function checkoutItem() {
+    try {
+      const response = await api.requests({
+        method: "POST",
+        url: `/cart/add/${product.id}`,
+        data: { qty: num },
+      });
+      console.log(response);
+      setSuccessMessage(
+        <span>
+          {num} {product.name} has been added to your cart. Check{" "}
+          <a href="/cart">cart</a> here.
+        </span>
+      );
     } catch (error) {
       console.log(error);
     }
@@ -70,8 +94,13 @@ function Detail() {
   useEffect(() => {
     AOS.init();
     getData();
-    
   }, []);
+
+  function checkoutNot() {
+    setErrorMessage(
+      <p>Please <a href="/login">login</a> first.</p>
+    );
+  }
 
   return (
     <>
@@ -197,28 +226,59 @@ function Detail() {
                           </Card.Text>
                         </Container>
                       </Row>
-
                       <Row>
                         <Card.Body>
                           <div className="card-btn">
-                            <Button
-                              className="btn-dtl detail-nunito"
-                              onClick={checkout}
-                            >
-                              Check Out
-                            </Button>{" "}
-                            <Button variant="outline-primary">
-                              <img
-                                className="prod-btn-size"
-                                src={cart}
-                                alt="box"
-                              />
-                            </Button>
+                            {!isAuth ? (
+                              <div>
+                                <Button
+                                  className="btn-dtl detail-nunito"
+                                  onClick={checkoutNot}
+                                >
+                                  Checkout
+                                </Button>
+                                <Button
+                                  variant="outline-primary"
+                                  onClick={checkoutNot}
+                                >
+                                  <img
+                                    className="prod-btn-size"
+                                    src={cart}
+                                    alt="box"
+                                  />
+                                </Button>
+                              </div>
+                            ) : (
+                              <div>
+                                <Button
+                                  className="btn-dtl detail-nunito"
+                                  onClick={checkout}
+                                >
+                                  Checkout
+                                </Button>
+                                <Button
+                                  variant="outline-primary"
+                                  onClick={checkoutItem}
+                                >
+                                  <img
+                                    className="prod-btn-size"
+                                    src={cart}
+                                    alt="box"
+                                  />
+                                </Button>
+                              </div>
+                            )}
                           </div>
                         </Card.Body>
                       </Row>
                     </Card.Body>
                   </Card>
+                  {successMessage && (
+                    <Alert variant="success">{successMessage}</Alert>
+                  )}
+                  {errorMessage && (
+                    <Alert variant="danger">{errorMessage}</Alert>
+                  )}
                 </div>
               </Container>
             </Col>

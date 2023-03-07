@@ -24,7 +24,7 @@ function CartList(props) {
               prefix={"Rp"}
             />
           </div>
-          <div className="prod-price">{props.qty}</div>
+          <div className="prod-price">qty : {props.qty}</div>
         </div>
       </Col>
     </>
