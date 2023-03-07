@@ -15,16 +15,24 @@ import {
   Row,
   Tab,
   Tabs,
+  Alert,
 } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import CurrencyFormat from "react-currency-format";
 import useApi from "../../helpers/useApi";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Detail() {
   const api = useApi();
+  const params = useParams();
   const [product, setProduct] = useState({});
   const [tabProduct, setTabProduct] = useState("detail");
-  const params = useParams();
+  const [num, setNum] = useState(1);
+  const navigate = useNavigate();
+  const [successMessage, setSuccessMessage] = useState("");
+  const { isAuth } = useSelector((state) => state.user);
+  const [errorMessage, setErrorMessage] = useState("");
 
   async function getData() {
     try {
@@ -37,7 +45,39 @@ function Detail() {
       console.log(error);
     }
   }
-  const [num, setNum] = useState(1);
+
+  async function checkout() {
+    try {
+      const response = await api.requests({
+        method: "POST",
+        url: `/cart/add/${product.id}`,
+        data: { qty: num },
+      });
+      console.log(response);
+      navigate("/cart");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function checkoutItem() {
+    try {
+      const response = await api.requests({
+        method: "POST",
+        url: `/cart/add/${product.id}`,
+        data: { qty: num },
+      });
+      console.log(response);
+      setSuccessMessage(
+        <span>
+          {num} {product.name} has been added to your cart. Check{" "}
+          <a href="/cart">cart</a> here.
+        </span>
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   function incrementCount() {
     setNum(num + 1);
@@ -56,10 +96,17 @@ function Detail() {
     getData();
   }, []);
 
+  function checkoutNot() {
+    setErrorMessage(
+      <p>Please <a href="/login">login</a> first.</p>
+    );
+  }
+
   return (
     <>
       <div>
         <NavbarAuth />
+        {/* <NavigationBar /> */}
         <Container>
           <Row>
             <Col>
@@ -135,19 +182,20 @@ function Detail() {
                         <Container className="detail-counter">
                           <div className="wrapper">
                             <button
-                              onClick={incrementCount}
-                              type="button"
-                              className="btn btn-light dtl-btn-count"
-                            >
-                              +
-                            </button>
-                            <span className="pnumber">{num}</span>
-                            <button
                               onClick={decrementCount}
                               type="button"
                               className="btn btn-light dtl-btn-count"
                             >
                               -
+                            </button>
+
+                            <span className="pnumber">{num}</span>
+                            <button
+                              onClick={incrementCount}
+                              type="button"
+                              className="btn btn-light dtl-btn-count"
+                            >
+                              +
                             </button>
                           </div>
                           <Card.Title className="detail-card2-line2 ">
@@ -155,7 +203,7 @@ function Detail() {
                           </Card.Title>
                         </Container>
                       </Row>
-                      <br />
+                      <br  />
                       <Row>
                         <Card.Text className="detail-card2-lineii">
                           Add Notes
@@ -178,25 +226,59 @@ function Detail() {
                           </Card.Text>
                         </Container>
                       </Row>
-
                       <Row>
                         <Card.Body>
                           <div className="card-btn">
-                            <Button className="btn-dtl detail-nunito">
-                              Check Out
-                            </Button>{" "}
-                            <Button variant="outline-primary">
-                              <img
-                                className="prod-btn-size"
-                                src={cart}
-                                alt="box"
-                              />
-                            </Button>
+                            {!isAuth ? (
+                              <div>
+                                <Button
+                                  className="btn-dtl detail-nunito"
+                                  onClick={checkoutNot}
+                                >
+                                  Checkout
+                                </Button>
+                                <Button
+                                  variant="outline-primary"
+                                  onClick={checkoutNot}
+                                >
+                                  <img
+                                    className="prod-btn-size"
+                                    src={cart}
+                                    alt="box"
+                                  />
+                                </Button>
+                              </div>
+                            ) : (
+                              <div>
+                                <Button
+                                  className="btn-dtl detail-nunito"
+                                  onClick={checkout}
+                                >
+                                  Checkout
+                                </Button>
+                                <Button
+                                  variant="outline-primary"
+                                  onClick={checkoutItem}
+                                >
+                                  <img
+                                    className="prod-btn-size"
+                                    src={cart}
+                                    alt="box"
+                                  />
+                                </Button>
+                              </div>
+                            )}
                           </div>
                         </Card.Body>
                       </Row>
                     </Card.Body>
                   </Card>
+                  {successMessage && (
+                    <Alert variant="success">{successMessage}</Alert>
+                  )}
+                  {errorMessage && (
+                    <Alert variant="danger">{errorMessage}</Alert>
+                  )}
                 </div>
               </Container>
             </Col>
@@ -238,18 +320,7 @@ function Detail() {
                     className="mb-3"
                   >
                     <Tab eventKey="detail" title="Details">
-                      <p className="detail-nunito">
-                        Sit cillum cillum laborum anim exercitation
-                        officia.Ipsum do ullamco deserunt velit elit.Ad commodo
-                        ex Lorem dolor amet et consequat cillum ipsum cillum
-                        non.Consectetur aute consectetur incididunt sint cillum
-                        qui nostrud officia nisi laborum.Eiusmod officia magna
-                        occaecat exercitation nisi esse quis ex culpa voluptate
-                        elit voluptate.Exercitation laborum ut esse ipsum aliqua
-                        elit consectetur aute duis.Aute nulla in voluptate
-                        pariatur qui eiusmod aliqua ut deserunt nisi proident
-                        aliqua consectetur.
-                      </p>
+                      <p className="detail-nunito">{product.description}</p>
                     </Tab>
                     <Tab eventKey="Review" title="Review">
                       <Card
@@ -263,7 +334,14 @@ function Detail() {
                             </Card.Title>
                             &nbsp; &nbsp;
                             <Card.Subtitle className="mb-1 detail-nunito">
-                              1 item {"|"} {"Rp. "}30000{".00"}
+                              1 item {"|"}{" "}
+                              <CurrencyFormat
+                                value={product.price}
+                                displayType={"text"}
+                                thousandSeparator={"."}
+                                decimalSeparator={","}
+                                prefix={"Rp"}
+                              />
                             </Card.Subtitle>
                           </Container>
                           <Container>

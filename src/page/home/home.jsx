@@ -5,8 +5,8 @@ import "aos/dist/aos.css";
 import Cards from "../../components/cards/cards";
 import NavigationBar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
-import Search from "../../components/searchbar/search";
-import Category from "../../components/navcategory/category";
+// import Search from "../../components/searchbar/search";
+// import Category from "../../components/navcategory/category";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import pict from "../../assets/image/woman.png";
 import box from "../../assets/icon/box.png";
@@ -22,7 +22,7 @@ function Home() {
     try {
       const { data } = await api.requests({
         method: "GET",
-        url: "/product/all",
+        url: "/product/sort?by=rating&order=desc",
       });
       setBest(data.data);
     } catch (error) {
@@ -213,7 +213,7 @@ function Home() {
                 <h1 className="hm-pg-title">Lectronic</h1>
               </div>
               <div>
-                <div className="hm-pd-search">
+                {/* <div className="hm-pd-search">
                   <Row>
                     <Col>
                       <Category />
@@ -222,7 +222,7 @@ function Home() {
                       <Search />
                     </Col>
                   </Row>
-                </div>
+                </div> */}
 
                 <Row>
                   {best.map((v) => {

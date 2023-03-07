@@ -12,6 +12,8 @@ import ForgetPassword from "./page/forget-password/forget-password"
 import UpdatePassword from "./page/update-password/update-password"
 import Cart from "./page/cart/cart"
 import Manage from "./page/manage-product/manage"
+import Checkout from "./page/checkout/checkout"
+import Thanks from "./page/success/thanks"
 
 
 
@@ -23,6 +25,7 @@ function router() {
 
         <Route element={<PrivateRoutes/>}>
           <Route path="/cart" element={<Cart/>} />
+          <Route path="/thanks" element={<Thanks/>} />
           <Route path="" element='' />
           <Route path="" element='' />
           <Route path="" element='' />
@@ -40,7 +43,9 @@ function router() {
         <Route path="/manage-product" element={<Manage/>}/>
         
         
-        
+        <Route path="/cart" element={<Cart/>} />
+        <Route path="" element='' />
+        <Route path="/checkout" element={<Checkout/>} />
         
     </Routes>
     </BrowserRouter>
