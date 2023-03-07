@@ -149,7 +149,7 @@ function Detail() {
                         <Card.Text className="detail-card2-lineii">
                           Add Notes
                         </Card.Text>
-                      </Row> */}
+                      </Row> 
                       <br />
                       <Row>
                         <Container className="detail-card2-line3">

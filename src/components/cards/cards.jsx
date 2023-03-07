@@ -1,7 +1,7 @@
 import React from "react";
 import "./cards.css";
 import { Button, Card, Col, Container } from "react-bootstrap";
-import CurrencyFormat from "react-currency-format";
+import CurrencyFormat from 'react-currency-format';
 import { Link } from 'react-router-dom'
 
 function Cards(props) {
