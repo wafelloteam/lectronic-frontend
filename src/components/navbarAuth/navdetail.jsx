@@ -4,7 +4,7 @@ import back from "../../assets/icon/back.png";
 import Profile from "../profile/profile";
 import { Container, Navbar } from "react-bootstrap";
 
-function NavbarAuth() {
+function NavbarDetail() {
   return (
     <>
       <Navbar className="nav-auth-margin">
@@ -21,4 +21,4 @@ function NavbarAuth() {
   );
 }
 
-export default NavbarAuth;
+export default NavbarDetail;
