@@ -6,6 +6,7 @@
 .detail-card-prop {
   border-radius: 20px;
   justify-content: center;
+  padding: 30px;
   box-shadow: 5px 4px 50px rgba(3, 0, 173, 0.2);
 }
 

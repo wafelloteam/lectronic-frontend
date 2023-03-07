@@ -68,8 +68,9 @@ function Detail() {
   }
 
   useEffect(() => {
-    getData();
     AOS.init();
+    getData();
+    
   }, []);
 
   return (
@@ -258,7 +259,7 @@ function Detail() {
                       <p className="detail-nunito">{product.description}</p>
                     </Tab>
                     <Tab
-                      ddata-aos="fade-left"
+                      data-aos="fade-left"
                       data-aos-delay="400"
                       data-aos-duration="2000"
                       eventKey="Review"
