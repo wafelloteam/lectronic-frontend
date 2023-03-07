@@ -1,12 +1,42 @@
 import NavbarAuth from "../../components/navbarAuth/navbarauth";
 import { Col, Container, Row, InputGroup, Form, Button } from "react-bootstrap";
 import searchicon from "../../assets/icon/search.png";
-import cart from "../../assets/icon/cart.png";
+// import cart from "../../assets/icon/cart.png";
 import person from "../../assets/icon/person.png";
 import "./cart.css";
 import CartList from "../../components/cart/cartList/cartList";
+import useApi from "../../helpers/useApi";
+import { React, useState, useEffect } from "react";
+import CurrencyFormat from "react-currency-format";
 
 function Cart() {
+  const api = useApi();
+  const [cart, setCart] = useState([]);
+
+
+  const getCart = async () => {
+    try {
+      const { data } = await api.requests({
+        method: "GET",
+        url: "/cart/all",
+      });
+      console.log(data.data);
+      setCart(data.data);
+
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getCart();
+  }, []);
+
+  const totalBill = cart.reduce(
+    (acc, curr) => acc + curr.product.price * curr.qty,
+    0
+  );
+
   return (
     <div>
       <NavbarAuth />
@@ -52,36 +82,22 @@ function Cart() {
         <div className="row-flex">
           <div className="row-cart">
             <Row>
-              <CartList />
-            </Row>
-            <Row>
-              <CartList />
-            </Row>
-            <Row>
-              <CartList />
-            </Row>
-            <Row>
-              <CartList />
-            </Row>
-            <Row>
-              <CartList />
-            </Row>
-            <Row>
-              <CartList />
-            </Row>
-            <Row>
-              <CartList />
-            </Row>
-            <Row>
-              <CartList />
-            </Row>
-            <Row>
-              <CartList />
+              {cart.map((v) => {
+                return (
+                  <CartList
+                    image={v.product.image}
+                    name={v.product.name}
+                    category={v.product.category}
+                    price={v.product.price}
+                    qty={v.qty}
+                  />
+                );
+              })}
             </Row>
           </div>
           <Row id="total-checkout">
             <div className="total">Total</div>
-            <div className="item">
+            {/* <div className="item">
               <div className="left">
                 <div>Item Price</div>
                 <div>Discount</div>
@@ -90,11 +106,17 @@ function Cart() {
                 <div>$0</div>
                 <div>$6000</div>
               </div>
-            </div>
-            <hr/>
+            </div> */}
+            <hr />
             <div className="bill">
-              <div >Bill</div>
-              <div >$6000</div>
+              <div>Bill</div>
+              <div><CurrencyFormat
+              value={totalBill}
+              displayType={"text"}
+              thousandSeparator={"."}
+              decimalSeparator={","}
+              prefix={"Rp"}
+            /></div>
             </div>
             <div className="checkout-btn">
               <div className="text">Check Out</div>
