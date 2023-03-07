@@ -1,0 +1,82 @@
+.change-address{
+    
+    padding-left: 35px;
+    padding-right: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 380px;
+    background: #FFFFFF;
+    /* Shadow/card */
+
+    box-shadow: 0px 0px 60px rgba(45, 45, 45, 0.1);
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.delivery {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 140%;
+    /* or 36px */
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #333333;
+}
+
+.address-box {
+
+    width: 100%;
+    height: 166px;
+    padding: 20px;
+    opacity: 0.5;
+    border: 1px solid #777777;
+    border-radius: 20px;
+}
+
+.address-text {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    width: 403px;
+    font-size: 18px;
+    line-height: 160%;
+    /* or 29px */
+
+    letter-spacing: 0.03em;
+
+    color: #000000;;
+}
+
+.change-btn {
+    
+    border: 1px solid #0300AD;
+    border-radius: 10px;
+}
+
+.adrr-btn {
+    padding: 17px 37px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    /* or 25px */
+
+    letter-spacing: 0.03em;
+
+    color: #0300AD;
+
+    opacity: 0.7;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0
+}
