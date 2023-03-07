@@ -41,8 +41,6 @@ function router() {
         <Route path="/about" element={<About/>}/>
         <Route path="/detail/:slug" element={<Detail/>} />
         <Route path="/manage-product" element={<Manage/>}/>
-        
-        
         <Route path="/cart" element={<Cart/>} />
         <Route path="" element='' />
         <Route path="/checkout" element={<Checkout/>} />

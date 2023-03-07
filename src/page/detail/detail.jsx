@@ -177,7 +177,7 @@ function Detail() {
                           Details
                         </Card.Title>
                       </Row>
-
+               
                       <Row>
                         <Container className="detail-counter">
                           <div className="wrapper">
@@ -203,7 +203,7 @@ function Detail() {
                           </Card.Title>
                         </Container>
                       </Row>
-                      <br  />
+                      <br />
                       <Row>
                         <Card.Text className="detail-card2-lineii">
                           Add Notes
