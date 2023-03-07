@@ -19,12 +19,15 @@ import {
 import { useParams } from "react-router-dom";
 import CurrencyFormat from "react-currency-format";
 import useApi from "../../helpers/useApi";
+import { useNavigate } from "react-router-dom";
 
 function Detail() {
   const api = useApi();
+  const params = useParams();
   const [product, setProduct] = useState({});
   const [tabProduct, setTabProduct] = useState("detail");
-  const params = useParams();
+  const [num, setNum] = useState(1);
+  const navigate = useNavigate();
 
   async function getData() {
     try {
@@ -37,19 +40,32 @@ function Detail() {
       console.log(error);
     }
   }
-  const [num, setNum] = useState(1)
 
-    function incrementCount() {
-        setNum(num + 1)
+  async function checkout() {
+    try {
+      const response = await api.requests({
+        method: "POST",
+        url: `/cart/add/${product.id}`,
+        data: { qty: num },
+      });
+      console.log(response);
+      navigate("/cart")
+    } catch (error) {
+      console.log(error);
     }
+  }
 
-    function decrementCount() {
-        if (num === 0) {
-            setNum(0)
-        } else {
-            setNum(num - 1)
-        }
+  function incrementCount() {
+    setNum(num + 1);
+  }
+
+  function decrementCount() {
+    if (num === 0) {
+      setNum(0);
+    } else {
+      setNum(num - 1);
     }
+  }
 
   useEffect(() => {
     AOS.init();
@@ -57,11 +73,11 @@ function Detail() {
     
   }, []);
 
-
   return (
     <>
       <div>
         <NavbarAuth />
+        {/* <NavigationBar /> */}
         <Container>
           <Row>
             <Col>
@@ -109,7 +125,7 @@ function Detail() {
                         className="detil-image-kecil customstyle"
                         style={{ width: "5rem", height: "5rem" }}
                       >
-                        <Container className="d-flex" >
+                        <Container className="d-flex">
                           <Card.Img src={product.image} alt="img-detail" />
                         </Container>
                       </Card>
@@ -132,20 +148,33 @@ function Detail() {
                           Details
                         </Card.Title>
                       </Row>
-               
+
                       <Row>
                         <Container className="detail-counter">
-                        <div className="wrapper">
-                          <button onClick={incrementCount} type="button" className="btn btn-light dtl-btn-count">+</button>
-                          <span className="pnumber">{num}</span>
-                          <button onClick={decrementCount} type="button" className="btn btn-light dtl-btn-count">-</button>
-                        </div>
-                        <Card.Title className="detail-card2-line2 ">
-                          Stock {product.stock}
-                        </Card.Title>
+                          <div className="wrapper">
+                            <button
+                              onClick={decrementCount}
+                              type="button"
+                              className="btn btn-light dtl-btn-count"
+                            >
+                              -
+                            </button>
+
+                            <span className="pnumber">{num}</span>
+                            <button
+                              onClick={incrementCount}
+                              type="button"
+                              className="btn btn-light dtl-btn-count"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <Card.Title className="detail-card2-line2 ">
+                            Stock {product.stock}
+                          </Card.Title>
                         </Container>
                       </Row>
-                      <br/>
+                      <br />
                       <Row>
                         <Card.Text className="detail-card2-lineii">
                           Add Notes
@@ -168,11 +197,14 @@ function Detail() {
                           </Card.Text>
                         </Container>
                       </Row>
-                      
+
                       <Row>
                         <Card.Body>
                           <div className="card-btn">
-                            <Button className="btn-dtl detail-nunito">
+                            <Button
+                              className="btn-dtl detail-nunito"
+                              onClick={checkout}
+                            >
                               Check Out
                             </Button>{" "}
                             <Button variant="outline-primary">
@@ -224,9 +256,7 @@ function Detail() {
                     className="mb-3"
                   >
                     <Tab eventKey="detail" title="Details">
-                      <p className="detail-nunito">
-                        {product.description}
-                      </p>
+                      <p className="detail-nunito">{product.description}</p>
                     </Tab>
                     <Tab
                       data-aos="fade-left"
@@ -246,7 +276,14 @@ function Detail() {
                             </Card.Title>
                             &nbsp; &nbsp;
                             <Card.Subtitle className="mb-1 detail-nunito">
-                              1 item {"|"} {"Rp. "}30000{".00"}
+                              1 item {"|"}{" "}
+                              <CurrencyFormat
+                                value={product.price}
+                                displayType={"text"}
+                                thousandSeparator={"."}
+                                decimalSeparator={","}
+                                prefix={"Rp"}
+                              />
                             </Card.Subtitle>
                           </Container>
                           <Container>
