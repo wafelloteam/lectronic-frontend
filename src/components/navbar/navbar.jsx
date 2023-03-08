@@ -104,7 +104,7 @@ function NavigationBar() {
                    <span className="user-nav" >{data.email}</span>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item>
+                <NavDropdown.Item href="/admin">Dashboard</NavDropdown.Item>
                 <NavDropdown.Item href="/cart">Cart</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">History</NavDropdown.Item>
                 <NavDropdown.Item href="/" onClick={doLogout} >Log Out</NavDropdown.Item>

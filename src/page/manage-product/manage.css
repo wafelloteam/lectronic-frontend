@@ -27,3 +27,35 @@
     width: 20px;
     height: 20px;
 }
+
+.mng-mdl-padd {
+    padding: 2rem;
+}
+
+.mng-mdl-col {
+    margin-right: 20px;
+}
+
+.modal-content {
+    width: 150%;
+}
+
+.mdl-font-title {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size:xx-large;
+}
+
+.mdl-font-child {
+    font-family: Nunito;
+    font-weight: bold;
+    color: #333333;
+    
+}
+
+.mdl-input-grup {
+    border-radius: 7px;
+    box-shadow: 2px 4px 10px rgba(3, 0, 173, 0.2);
+    
+}
+
