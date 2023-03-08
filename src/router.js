@@ -31,7 +31,7 @@ function router() {
           <Route path="" element='' />
         </Route>
 
-        <Route path="/testing" element={<Dashboard/>} />
+        <Route path="/admin" element={<Dashboard/>} />
         <Route path="/underconstruct" element={<Underconstruct/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/login" element={<Login/>} />
