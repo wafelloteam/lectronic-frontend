@@ -1,0 +1,61 @@
+.mng-plus {
+    font-family: Nunito;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+.mng-btn-blue button {
+    border-radius: 15px;
+    height: 60px;
+    width: 80px;
+    margin-left: 30px;
+    background-color: #0300AD;
+    box-shadow: 5px 4px 50px rgba(3, 0, 173, 0.2);
+}
+
+.mng-btn-nav button {
+    border-radius: 15px;
+    height: 60px;
+    width: 80px;
+    margin-left: 30px;
+    background-color: white;
+    box-shadow: 5px 4px 50px rgba(3, 0, 173, 0.2);
+}
+
+.prod-btn-plus {
+    width: 20px;
+    height: 20px;
+}
+
+.mng-mdl-padd {
+    padding: 2rem;
+}
+
+.mng-mdl-col {
+    margin-right: 20px;
+}
+
+.modal-content {
+    width: 150%;
+}
+
+.mdl-font-title {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size:xx-large;
+}
+
+.mdl-font-child {
+    font-family: Nunito;
+    font-weight: bold;
+    color: #333333;
+    
+}
+
+.mdl-input-grup {
+    border-radius: 7px;
+    box-shadow: 2px 4px 10px rgba(3, 0, 173, 0.2);
+    
+}
+

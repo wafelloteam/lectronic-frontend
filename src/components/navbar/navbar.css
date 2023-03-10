@@ -3,6 +3,10 @@
     
 }
 
+.dropdown-toggle::after {
+    display: none !important;
+}
+
 .nv-center {
     display: flex;
     justify-content: space-around;
@@ -23,4 +27,15 @@
 
 .nv-margin-right {
    margin-right: 50px;
+}
+
+.user-nav {
+    font-family: Nunito;
+    color: #777777;
+    font-size: small;
+    padding-top: -30px;
+}
+
+.nav-tes-margin {
+    margin-bottom: -6px;
 }

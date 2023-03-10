@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import "./navbar.css";
-import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
+import { Button, Col, Container, Nav, NavDropdown, Navbar, Row } from "react-bootstrap";
 import iconbar from "../../assets/icon/Logo.png";
-
+import logo from "../../assets/icon/Logo.png";
+import user from "../../assets/image/edward-photo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { logout, setData } from "../../store/reducer/user";
 import useApi from "../../helpers/useApi";
@@ -62,7 +63,7 @@ function NavigationBar() {
                 <Nav.Link href="/product">Product</Nav.Link>
               </Col>
               <Col className="nv-margin-right">
-                <Nav.Link href="/detail">Community</Nav.Link>
+                <Nav.Link href="/testing">Community</Nav.Link>
               </Col>
               <Col>
                 <Nav.Link href="/about">About</Nav.Link>
@@ -89,13 +90,25 @@ function NavigationBar() {
                 </Button>{" "}
               </div>
             ) : (
+
               <div>
-                <Button href="/login" variant="primary" size="large">
-                  Welcome {full_name}
-                </Button>{" "}
-                <Button onClick={doLogout} variant="primary" size="large">
-                  Logout
-                </Button>{" "}
+              <NavDropdown
+                title={<img className="nav-img-size" src={logo} alt="logo-lectronic" />}
+                drop="end"
+              >
+                <NavDropdown.Item className="nav-dropdown-user" href="#action/3.1">
+                  <img className="imgNav" src={user} alt="user-img" />
+                </NavDropdown.Item>
+                <NavDropdown.Item className="nav-dropdown-user" href="#action/3.1">
+                   <p className="nav-tes-margin">{full_name}</p>
+                   <span className="user-nav" >{data.email}</span>
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/admin">Dashboard</NavDropdown.Item>
+                <NavDropdown.Item href="/cart">Cart</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">History</NavDropdown.Item>
+                <NavDropdown.Item href="/" onClick={doLogout} >Log Out</NavDropdown.Item>
+              </NavDropdown>
               </div>
             )}
           </Container>

@@ -3,7 +3,7 @@ import "./detail.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import cart from "../../assets/icon/shopping_cart.png";
-import NavbarAuth from "../../components/navbarAuth/navdetail";
+import NavbarAuth from "../../components/navbarAuth/navbarauth";
 // import picture from "../../assets/image/AIAIAI-TMA-1.jpg";
 import Footer from "../../components/footer/footer";
 import {
@@ -77,7 +77,7 @@ function Detail() {
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   function incrementCount() {
     setNum(num + 1);
@@ -164,7 +164,7 @@ function Detail() {
                 <br />
                 <div>
                   <Card
-                    data-aos="fade-right"
+                    data-aos="fade-left"
                     data-aos-delay="200"
                     data-aos-duration="2000"
                     data-aos-once="true"
@@ -177,7 +177,7 @@ function Detail() {
                           Details
                         </Card.Title>
                       </Row>
-
+               
                       <Row>
                         <Container className="detail-counter">
                           <div className="wrapper">
@@ -296,14 +296,18 @@ function Detail() {
                 <h5
                   className="detail-nunito"
                   data-aos="fade-left"
-                  data-aos-delay="200"
+                  data-aos-delay="400"
                   data-aos-duration="2000"
                 >
                   Sold {product.sold} {"|"} Rating: {product.rating}
                 </h5>
-                <hr />
-                <Container
+                <hr
                   data-aos="fade-left"
+                  data-aos-delay="400"
+                  data-aos-duration="2000"
+                />
+                <Container
+                  data-aos="fade-up"
                   data-aos-delay="400"
                   data-aos-duration="2000"
                 >
@@ -318,13 +322,7 @@ function Detail() {
                     <Tab eventKey="detail" title="Details">
                       <p className="detail-nunito">{product.description}</p>
                     </Tab>
-                    <Tab
-                      data-aos="fade-left"
-                      data-aos-delay="400"
-                      data-aos-duration="2000"
-                      eventKey="Review"
-                      title="Review"
-                    >
+                    <Tab eventKey="Review" title="Review">
                       <Card
                         className="card-inside-review"
                         style={{ width: "39rem" }}
