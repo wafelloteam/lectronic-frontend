@@ -65,7 +65,7 @@
     <a href="https://lectronic.myvehicle-rent.site/">
     <img src="https://res.cloudinary.com/dbr4g7rcg/image/upload/v1678521630/product-page_g5hlta.png" alt="Logo" width="80%" height="80%">
     </a>
-     <h3> checkout a product </h3>
+     <h3> Detail product </h3>
     <a href="https://lectronic.myvehicle-rent.site/">
     <img src="https://res.cloudinary.com/dbr4g7rcg/image/upload/v1678521708/detail-page_hxcyoq.png" alt="Logo" width="80%" height="80%">
     </a>
