@@ -48,7 +48,6 @@
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
- <br />
 <!-- ABOUT THE PROJECT -->
 
 ## About Lectronic
