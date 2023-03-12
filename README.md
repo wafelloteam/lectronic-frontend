@@ -11,7 +11,7 @@
     <img src="./src/assets/icon/Logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="left" style="color:#0300AD">Lectronic</h3>
+  <h1 align="left" style="color:#0300AD">Lectronic</h3>
 
   <p align="left">
     An awesome electronic market place website !
