@@ -83,10 +83,10 @@ Of course this project still has many shortcomings, we hope to be able to comple
 
 This application is build by some tools and library, including:
 
-- [![Npm][npmjs]][npm-url]
-- [![React][react.js]][react-url]
-- [![Bootstrap][bootstrap.com]][bootstrap-url]
-- [![Redux][redux]][redux-url]
+[![Npm][npmjs]][npm-url]
+[![React][react.js]][react-url]
+[![Bootstrap][bootstrap.com]][bootstrap-url]
+[![Redux][redux]][redux-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
