@@ -4,18 +4,16 @@
 [![Forks][forks-shield]][forks-url]
 [![Issue][issues-shield]][issues-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
+<div align="left">
   <a href="https://lectronic.myvehicle-rent.site/">
     <img src="./src/assets/icon/Logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center" style="color:#0300AD">Lectronic</h3>
+  <h3 align="left" style="color:#0300AD">Lectronic</h3>
 
-  <p align="center">
+  <p align="left">
     An awesome electronic market place website !
     <br />
     <br />
@@ -27,9 +25,8 @@
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
+<br />
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -51,54 +48,50 @@
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
-
-
+ <br />
+    <br />
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
 
-<div align="center">
+## About Lectronic
+
+<div align="left">
   <a href="https://lectronic.myvehicle-rent.site/">
-    <img src="./image/screnshootgif.gif" alt="Logo" width="80%" height="80%">
+    <img src="./image/screnshootgif.gif" alt="Logo" height="250">
     </a>
-    <h3> choose a product </h3>
+    <h3> Choose product </h3>
     <a href="https://lectronic.myvehicle-rent.site/">
-    <img src="https://res.cloudinary.com/dbr4g7rcg/image/upload/v1678521630/product-page_g5hlta.png" alt="Logo" width="80%" height="80%">
+    <img src="https://res.cloudinary.com/dbr4g7rcg/image/upload/v1678521630/product-page_g5hlta.png" alt="Logo" height="250">
     </a>
      <h3> Detail product </h3>
     <a href="https://lectronic.myvehicle-rent.site/">
-    <img src="https://res.cloudinary.com/dbr4g7rcg/image/upload/v1678521708/detail-page_hxcyoq.png" alt="Logo" width="80%" height="80%">
+    <img src="https://res.cloudinary.com/dbr4g7rcg/image/upload/v1678521708/detail-page_hxcyoq.png" alt="Logo" height="250">
     </a>
 </div>
 
 <br/>
-Lectronic is a marketplace-based website, which is specifically for selling electronic goods. For now, this project is still in the development stage.
+Lectronic is a marketplace-based website, which is specifically for selling electronic goods. For now, this project is still in the development stage. Some features, including:
 
-Some of the features is has, including:
-* Login/ Register
-* Manage Product
-* Add product
-* Search and Sort
+- Login/ Register
+- Manage Product
+- Add product
+- Search and Sort
 
 Of course this project still has many shortcomings, we hope to be able to complete the development of this project as soon as possible.
-
-
-
 
 ### Built With
 
 This application is build by some tools and library, including:
 
-* [![Npm][Npmjs]][npm-url]
-* [![React][React.js]][React-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![Redux][redux]][redux-url]
+- [![Npm][npmjs]][npm-url]
+- [![React][react.js]][react-url]
+- [![Bootstrap][bootstrap.com]][bootstrap-url]
+- [![Redux][redux]][redux-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -107,14 +100,14 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+
+```sh
+npm install npm@latest -g
+```
 
 ### Installation
 
-_Follow the step bellow, for prepare the project_
+Follow the step bellow, for prepare the project
 
 1. Get a API from lectronic back-end project at [lectronic back-end](https://github.com/wafellofazztrack/lectronic-backend) and follow the step.
 2. Clone the repo
@@ -126,18 +119,20 @@ _Follow the step bellow, for prepare the project_
    npm install
    ```
 4. Enter your API in `env.local_example` and change file name to: `.env.local`;
+
    ```js
     REACT_APP_BASE_API_URL=https://yourlocalhost:yourport/
    ```
 
 5. Now You All Set, you can run :
-    ```sh
-    npm start
-    ```
+   ```sh
+   npm start
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -153,18 +148,16 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Muhammad Angga Ardhinata - [@Linkedin](https://www.linkedin.com/in/anggaardhinata/) - ardhinataangga@gmail.com
@@ -178,10 +171,9 @@ Project Link: [https://github.com/ardhisaif](https://github.com/ardhisaif)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/wafellofazztrack/Lectronic-Front-End?style=for-the-badge
 [contributors-url]: https://github.com/wafellofazztrack/Lectronic-Front-End/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/wafellofazztrack/Lectronic-Front-End.svg?style=for-the-badge
@@ -193,11 +185,11 @@ Project Link: [https://github.com/ardhisaif](https://github.com/ardhisaif)
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: ./image/screnshootgif.gif
-[Npmjs]: https://img.shields.io/badge/npm-555555?style=for-the-badge&logo=npm&logoColor=red
+[npmjs]: https://img.shields.io/badge/npm-555555?style=for-the-badge&logo=npm&logoColor=red
 [npm-url]: https://www.npmjs.com/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
+[bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[bootstrap-url]: https://getbootstrap.com
 [redux]: https://img.shields.io/badge/Redux-563D7C?style=for-the-badge&logo=REDUX&logoColor=white
 [redux-url]: https://redux.js.org/
