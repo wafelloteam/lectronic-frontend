@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import AOS from "aos";
 import pict from "../../assets/image/login.png";
 import email from "../../assets/icon/baseline_mail_outline_black_24dp.png";
 import passpict from "../../assets/icon/baseline_vpn_key_black_24dp.png";
@@ -11,7 +12,7 @@ import {
   InputGroup,
   Navbar,
   Row,
-  Alert
+  Alert,
 } from "react-bootstrap";
 
 import { useNavigate } from "react-router-dom";
@@ -58,6 +59,7 @@ function Login() {
   };
 
   useEffect(() => {
+    AOS.init();
     if (isAuth) {
       navigate("/");
     }
@@ -68,7 +70,9 @@ function Login() {
         <Row>
           <Col className="sign-col">
             <Navbar>
-              <Container>
+              <Container data-aos="fade-down"
+              data-aos-delay="600"
+              data-aos-duration="1000">
                 <Navbar.Brand href="/">
                   {" "}
                   <img
@@ -84,12 +88,28 @@ function Login() {
             <br />
             <br />
 
-            <h1>Welcome Back!</h1>
-            <p className="sign-fontclr">
+            <h1
+              data-aos="fade-down"
+              data-aos-delay="0"
+              data-aos-duration="1000"
+            >
+              Welcome Back!
+            </h1>
+            <p
+              data-aos="fade-right"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+              className="sign-fontclr"
+            >
               Steps to get started, find the best stuff.
             </p>
 
-            <InputGroup className="mb-3">
+            <InputGroup
+              data-aos="fade-right"
+              data-aos-delay="400"
+              data-aos-duration="1000"
+              className="mb-3"
+            >
               <InputGroup.Text id="basic-addon1">
                 {" "}
                 <img src={email} alt="username"></img>
@@ -99,10 +119,15 @@ function Login() {
                 aria-label="Email"
                 aria-describedby="basic-addon1"
                 onChange={onChangeInput}
-            name="email"
+                name="email"
               />
             </InputGroup>
-            <InputGroup className="mb-3">
+            <InputGroup
+              data-aos="fade-right"
+              data-aos-delay="600"
+              data-aos-duration="1000"
+              className="mb-3"
+            >
               <InputGroup.Text id="basic-addon1">
                 {" "}
                 <img src={passpict} alt="username"></img>
@@ -113,12 +138,27 @@ function Login() {
                 aria-label="Password"
                 aria-describedby="basic-addon1"
                 onChange={onChangeInput}
-            name="password"
+                name="password"
               />
             </InputGroup>
-            <p className="sign-fontclr"><a href="/forget-password">Forgot Password ?</a></p>
+            <p
+              data-aos="fade-right"
+              data-aos-delay="800"
+              data-aos-duration="1000"
+              className="sign-fontclr"
+            >
+              <a href="/forget-password">Forgot Password ?</a>
+            </p>
             <div className="sign-btn">
-              <Button onClick={doLogin} variant="primary">Login</Button>{" "}
+              <Button
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+                onClick={doLogin}
+                variant="primary"
+              >
+                Login
+              </Button>{" "}
             </div>
             <div>
               {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
@@ -127,13 +167,22 @@ function Login() {
             <br />
             <br />
             <div>
-              <p className="login-crtacc">
+              <p
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+                className="login-crtacc"
+              >
                 Not Registerd yet ? <a href="/register">Create an Account</a>{" "}
               </p>
             </div>
           </Col>
           <Col>
-            <Container>
+            <Container
+              data-aos="fade-left"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+            >
               <img className="hm-bg" src={pict} alt="woman-pict"></img>
             </Container>
           </Col>
