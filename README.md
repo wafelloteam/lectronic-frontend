@@ -64,6 +64,10 @@
     <a href="https://lectronic.myvehicle-rent.site/">
     <img src="https://res.cloudinary.com/dbr4g7rcg/image/upload/v1678521708/detail-page_hxcyoq.png" alt="Logo" height="250">
     </a>
+    <h3> Add to cart </h3>
+    <a href="https://lectronic.myvehicle-rent.site/">
+    <img src="https://res.cloudinary.com/dbr4g7rcg/image/upload/v1678680318/screencapture-localhost-3000-cart-2023-03-13-10_57_29_lm88fc.png" alt="Logo" height="350">
+    </a>
 </div>
 
 <br/>
@@ -163,7 +167,7 @@ Project Link: [https://github.com/AnggaArdhinata](https://github.com/AnggaArdhin
 Rizaldi Fauzi - [@Linkedin](https://www.linkedin.com/in/rfauzi44/) - rizaldifauzi44@gmail.com
 Project Link: [https://github.com/rfauzi44](https://github.com/rfauzi44)
 
-Ahmad Syaifudin Ardhiansyah - [@Linkedin](https://www.linkedin.com/in/ardhisaif/) - ahmadsaifudinardhiansyah@gmail.com
+Ahmad Saifudin Ardhiansyah - [@Linkedin](https://www.linkedin.com/in/ardhisaif/) - ahmadsaifudinardhiansyah@gmail.com
 Project Link: [https://github.com/ardhisaif](https://github.com/ardhisaif)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
