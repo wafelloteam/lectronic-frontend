@@ -110,13 +110,15 @@ function Home() {
         <div id="page2" className="scroll-area">
           <Container>
             <div data-aos="fade-up" data-aos-duration="2000">
-              <Card
-                className="hm-cr"
-                bg={"light"}
-                style={{ width: "147px", height: "52px" }}
-              >
-                <Card.Title className="hm-cr-title">How it Works</Card.Title>
-              </Card>
+              <div className="hm-display">
+                <Card
+                  className="hm-cr"
+                  bg={"light"}
+                  style={{ width: "147px", height: "52px" }}
+                >
+                  <Card.Title className="hm-cr-title">How it Works</Card.Title>
+                </Card>
+              </div>
               <div className="hm-title-display">
                 <h1 className="hm-pg-title">Make An</h1>
                 <h1 className="hm-pg-title">Order Easily</h1>
@@ -201,13 +203,15 @@ function Home() {
         <div id="page3" className="scroll-area">
           <Container>
             <div data-aos="fade-up" data-aos-duration="2000">
-              <Card
-                className="hm-cr"
-                bg={"light"}
-                style={{ width: "147px", height: "52px" }}
-              >
-                <Card.Title className="hm-cr-title">Our Product</Card.Title>
-              </Card>
+              <div className="hm-display">
+                <Card
+                  className="hm-cr"
+                  bg={"light"}
+                  style={{ width: "147px", height: "52px" }}
+                >
+                  <Card.Title className="hm-cr-title">Our Product</Card.Title>
+                </Card>
+              </div>
               <div className="hm-title-display">
                 <h1 className="hm-pg-title">The Best Product By</h1>
                 <h1 className="hm-pg-title">Lectronic</h1>
