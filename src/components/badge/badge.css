@@ -1,0 +1,13 @@
+.foo-container {
+    position:fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999999;
+  }
+  
+  .foo {
+    display: block;
+    margin-bottom: 10px;
+    z-index: 9999999;
+  }
+  
