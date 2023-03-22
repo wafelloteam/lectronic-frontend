@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import angga from "../../assets/image/angga.jpeg";
 import ardi from "../../assets/image/ardi.jpeg";
-import edward from "../../assets/image/edward-photo.png";
+import rf from "../../assets/image/rf.jpg";
 import NavigationBar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 
@@ -71,7 +71,7 @@ function About() {
                 style={{ width: "18rem" }}
               >
                 <Container className="about-container">
-                  <img className="about-img-parent" src={edward} alt="box" />
+                  <img className="about-img-parent" src={rf} alt="box" />
                   <Card.Title className="about-role-title">
                     Rizaldi Fauzi
                   </Card.Title>
@@ -86,7 +86,7 @@ function About() {
                   be great"
                 </Card.Text>
                   <Card.Text className="about-card-title">
-                  <Link to={'https://www.linkedin.com/in/rizaldifauzi/'} target="blank">
+                  <Link to={'https://www.linkedin.com/in/rfauzi44/'} target="blank">
                     Click to Find Me on LinkedIn
                     </Link>
                   </Card.Text>

@@ -1,70 +1,196 @@
-# Lectronic Front-End APP ##
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Issue][issues-shield]][issues-url]
 
-## Available Scripts
+<!-- PROJECT LOGO -->
+<br />
+<div align="left">
+  <a href="https://lectronic.myvehicle-rent.site/">
+    <img src="./src/assets/icon/Logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-In the project directory, you can run:
+  <h1 align="left" style="color:#0300AD">Lectronic</h3>
 
-### `npm start`
+  <p align="left">
+    An awesome electronic market place website !
+    <br />
+    <br />
+    <a href="https://lectronic.myvehicle-rent.site/">View Demo</a>
+    ·
+    <a href="https://github.com/wafellofazztrack">Report Bug</a>
+    ·
+    <a href="https://github.com/wafellofazztrack/Lectronic-Front-End">Request Feature</a>
+  </p>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- TABLE OF CONTENTS -->
+<br />
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+<!-- ABOUT THE PROJECT -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## About Lectronic
 
-### `npm test`
+<div align="left">
+  <a href="https://lectronic.myvehicle-rent.site/">
+    <img src="./image/screnshootgif.gif" alt="Logo" height="250">
+    </a>
+    <h3> Choose product </h3>
+    <a href="https://lectronic.myvehicle-rent.site/">
+    <img src="https://res.cloudinary.com/dbr4g7rcg/image/upload/v1678521630/product-page_g5hlta.png" alt="Logo" height="250">
+    </a>
+     <h3> Detail product </h3>
+    <a href="https://lectronic.myvehicle-rent.site/">
+    <img src="https://res.cloudinary.com/dbr4g7rcg/image/upload/v1678521708/detail-page_hxcyoq.png" alt="Logo" height="250">
+    </a>
+    <h3> Add to cart </h3>
+    <a href="https://lectronic.myvehicle-rent.site/">
+    <img src="https://res.cloudinary.com/dbr4g7rcg/image/upload/v1678680318/screencapture-localhost-3000-cart-2023-03-13-10_57_29_lm88fc.png" alt="Logo" height="350">
+    </a>
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br/>
+Lectronic is a marketplace-based website, which is specifically for selling electronic goods. For now, this project is still in the development stage. Some features, including:
 
-### `npm run build`
+- Login/ Register
+- Manage Product
+- Add product
+- Search and Sort
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Of course this project still has many shortcomings, we hope to be able to complete the development of this project as soon as possible.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Built With
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This application is build by some tools and library, including:
 
-### `npm run eject`
+[![Npm][npmjs]][npm-url]
+[![React][react.js]][react-url]
+[![Bootstrap][bootstrap.com]][bootstrap-url]
+[![Redux][redux]][redux-url]
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- GETTING STARTED -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This is an example of how to list things you need to use the software and how to install them.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm install npm@latest -g
+```
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Follow the step bellow, for prepare the project
 
-### Analyzing the Bundle Size
+1. Get a API from lectronic back-end project at [lectronic back-end](https://github.com/wafellofazztrack/lectronic-backend) and follow the step.
+2. Clone the repo
+   ```sh
+   git clone https://github.com/wafellofazztrack/Lectronic-Front-End
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `env.local_example` and change file name to: `.env.local`;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```js
+    REACT_APP_BASE_API_URL=https://yourlocalhost:yourport/
+   ```
 
-### Making a Progressive Web App
+5. Now You All Set, you can run :
+   ```sh
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Advanced Configuration
+<!-- CONTRIBUTING -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-### `npm run build` fails to minify
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Muhammad Angga Ardhinata - [@Linkedin](https://www.linkedin.com/in/anggaardhinata/) - ardhinataangga@gmail.com
+Project Link: [https://github.com/AnggaArdhinata](https://github.com/AnggaArdhinata)
+
+Rizaldi Fauzi - [@Linkedin](https://www.linkedin.com/in/rfauzi44/) - rizaldifauzi44@gmail.com
+Project Link: [https://github.com/rfauzi44](https://github.com/rfauzi44)
+
+Ahmad Saifudin Ardhiansyah - [@Linkedin](https://www.linkedin.com/in/ardhisaif/) - ahmadsaifudinardhiansyah@gmail.com
+Project Link: [https://github.com/ardhisaif](https://github.com/ardhisaif)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/wafellofazztrack/Lectronic-Front-End?style=for-the-badge
+[contributors-url]: https://github.com/wafellofazztrack/Lectronic-Front-End/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/wafellofazztrack/Lectronic-Front-End.svg?style=for-the-badge
+[forks-url]: https://github.com/wafellofazztrack/Lectronic-Front-End/network/members
+[issues-shield]: https://img.shields.io/github/issues/wafellofazztrack/Lectronic-Front-End.svg?style=for-the-badge
+[issues-url]: https://github.com/wafellofazztrack/Lectronic-Front-End/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: ./image/screnshootgif.gif
+[npmjs]: https://img.shields.io/badge/npm-555555?style=for-the-badge&logo=npm&logoColor=red
+[npm-url]: https://www.npmjs.com/
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
+[bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[bootstrap-url]: https://getbootstrap.com
+[redux]: https://img.shields.io/badge/Redux-563D7C?style=for-the-badge&logo=REDUX&logoColor=white
+[redux-url]: https://redux.js.org/

@@ -41,21 +41,29 @@
 }
 
 .hm-bg {
-width: 574px;
-height: auto;
+    display: flex;
+    width: 574px;
+    height: auto;
+}
 
+.hm-display {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .hm-cr{
+    display: flex;
+    justify-content: center;
     border-radius: 10px;
     color: blue;
-    padding-top: 5px;
     margin-top: 100px;
-    margin-left: 495px;
     margin-bottom: 50px;
 }
 
 .hm-cr-title {
+    display: flex;
+    justify-content: center;
     margin-top: 5px;
     margin-bottom: 7px;
     width: auto;
@@ -192,4 +200,8 @@ height: auto;
 .hm-clr-btn {
     background: #0300AD;
     --bs-btn-border-color: #0300AD;
+}
+
+.gSOTDD {
+    justify-content: space-between;
 }

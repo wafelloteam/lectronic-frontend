@@ -1,7 +1,7 @@
 import NavbarAuth from "../../components/navbarAuth/navbarauth";
 import { Col, Container, Row, InputGroup, Form, Button } from "react-bootstrap";
 import searchicon from "../../assets/icon/search.png";
-// import cart from "../../assets/icon/cart.png";
+import cartLogo from "../../assets/icon/cart.png";
 import person from "../../assets/icon/person.png";
 import "./cart.css";
 import CartList from "../../components/cart/cartList/cartList";
@@ -85,7 +85,7 @@ function Cart() {
 
           <div className="prod-btn-nav">
             <Button variant="outline-light">
-              <img className="prod-btn-size" src={cart} alt="box" />
+              <img className="prod-btn-size" src={cartLogo} alt="box" />
             </Button>
           </div>
         </Container>

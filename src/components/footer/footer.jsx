@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./Logo1.png";
 import { Foot, Content } from "../style/footerStyle";
+import Badges from "../badge/badge";
 
 function Footer() {
   return (
@@ -47,6 +48,9 @@ function Footer() {
             <li>FAQs</li>
           </ul>
         </Content>
+        <div>
+          <Badges />
+        </div>
       </Foot>
     </>
   );

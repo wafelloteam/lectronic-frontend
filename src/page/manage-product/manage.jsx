@@ -1,7 +1,7 @@
-import { React, useEffect, useState } from "react";
+import { React, useState } from "react";
 import "./manage.css";
 import axios from "axios";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import {
   Button,
   Col,
@@ -11,18 +11,16 @@ import {
   Modal,
   Row,
 } from "react-bootstrap";
-import { useSelector, useDispatch } from "react-redux";
 import NavbarAuth from "../../components/navbarAuth/navbarauth";
 import ManageCards from "../../components/manage-card/manage-card";
 import filter from "../../assets/icon/outline_filter_alt_black_24dp.png";
 import plus from "../../assets/icon/plus.png";
 import searchicon from "../../assets/icon/search.png";
-import { login } from "../../store/reducer/user";
+import { useSelector } from "react-redux";
+
 
 function Manage() {
-  // const { isAuth } = useSelector((state) => state.users)
-  const dispatch = useDispatch()
-  // const navigate = useNavigate()
+  const { token } = useSelector((state) => state.user)
   const [show, setShow] = useState(false);
   const [product, setProduct] = useState({
     name:'name',
@@ -61,18 +59,21 @@ const onSubmit = () => {
       formData.append(key, product[key])
   }
  
+  console.log(token)
+
   axios({
     method: 'POST',
-    url: 'http://localhost:3001/product/add',
+    url: 'https://api2.myvehicle-rent.site/product/add',
     headers: { 'Content-Type': 'multipart/form-data' },
+    Authorization: `Bearer ${token}`,
     data: formData
+   
 })
     .then((res) => {
-        const {data} = res.data
-        dispatch(login(data.token))
+        console.log(res.data)
         // navigate('/admin')
     })
-    .catch((err) => console.log(err))
+    .catch((err) => console.log(err))   
 
 }
 
