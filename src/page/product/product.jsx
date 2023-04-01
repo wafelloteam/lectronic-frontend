@@ -102,7 +102,7 @@ function Product() {
           </Container>
         </Row>
         <Row className="prod-category">
-          <Category handleFilter={setFilterCategory} />
+          <Category handleFilter={setFilterCategory} getAll={getAll} />
         </Row>
         <Row>
           {product.map((v) => {
