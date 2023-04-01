@@ -2,14 +2,14 @@ import React from "react";
 import "./category.css";
 import { Nav } from "react-bootstrap";
 
-function Category({ handleFilter }) {
+function Category({ handleFilter, getAll }) {
   const handleClick = (category) => {
     handleFilter(category);
   };
   return (
-    <Nav className="navcat-bg" variant="pills" defaultActiveKey="#">
+    <Nav className="navcat-bg" variant="pills" defaultActiveKey="#all">
       <Nav.Item>
-        <Nav.Link href="#">
+        <Nav.Link eventKey="link-0" href="#all" onClick={getAll}>
           All
         </Nav.Link>
       </Nav.Item>
