@@ -126,8 +126,8 @@ function Product() {
               <Form.Select onChange={(e) => setSortBy(e.target.value)}>
                 <option value="1">BY</option>
                 <option value="price">Price</option>
-                <option value="created_at">Created</option>
-                <option value="rating">Rating</option>
+                <option value="name">Name</option>
+                <option value="stock">Stock</option>
               </Form.Select>
             </Col>
             <Col className="mx=3">
