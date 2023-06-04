@@ -14,6 +14,8 @@ function Product() {
   const [product, setProduct] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState("");
   const [filterCategory, setFilterCategory] = useState("");
+  const [sortBy, setSortBy] = useState("");
+  const [sortOrder, setSortOrder] = useState("");
 
   const getAll = async () => {
     try {
@@ -51,13 +53,26 @@ function Product() {
     }
   };
 
-  useEffect(() => {
-    getCategory(filterCategory);
-  }, [filterCategory]);
+  const getSort = async () => {
+    try {
+      const { data } = await api.requests({
+        method: "GET",
+        url: `/product/sort?by=${sortBy}&order=${sortOrder}`,
+      });
+      setProduct(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // useEffect(() => {
+  //   getCategory(filterCategory);
+  // }, [filterCategory]);
 
   useEffect(() => {
     getAll();
-  }, []);
+    getCategory(filterCategory);
+  }, [filterCategory]);
 
   return (
     <div>
@@ -101,9 +116,38 @@ function Product() {
             </div>
           </Container>
         </Row>
-        <Row className="prod-category">
-          <Category handleFilter={setFilterCategory} getAll={getAll} />
-        </Row>
+
+        <Form>
+          <Row>
+            <Col>
+              <Category handleFilter={setFilterCategory} getAll={getAll} />
+            </Col>
+            <Col>
+              <Form.Select onChange={(e) => setSortBy(e.target.value)}>
+                <option value="1">BY</option>
+                <option value="price">Price</option>
+                <option value="created_at">Created</option>
+                <option value="rating">Rating</option>
+              </Form.Select>
+            </Col>
+            <Col className="mx=3">
+              <Form.Select onChange={(e) => setSortOrder(e.target.value)}>
+                <option value="">ORDER</option>
+                <option value="desc">ASC</option>
+                <option value="asc">DESC</option>
+              </Form.Select>
+            </Col>
+            <Col>
+              <Button
+                variant="primary"
+                className="hm-clr-btn"
+                onClick={() => getSort()}
+              >
+                Sort
+              </Button>
+            </Col>
+          </Row>
+        </Form>
         <Row>
           {product.map((v) => {
             return (
