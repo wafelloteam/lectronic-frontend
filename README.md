@@ -17,7 +17,7 @@
     An awesome electronic market place website !
     <br />
     <br />
-    <a href="https://lectronic.myvehicle-rent.site/">View Demo</a>
+    <a href="https://lectronic.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/wafellofazztrack">Report Bug</a>
     ·
