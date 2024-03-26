@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./Logo1.png";
 import { Foot, Content } from "../style/footerStyle";
 import Badges from "../badge/badge";
 
@@ -8,7 +7,7 @@ function Footer() {
     <>
       <Foot>
         <Content>
-          <div>
+          {/* <div>
             <img
               alt=""
               src={logo}
@@ -19,7 +18,7 @@ function Footer() {
             <br />
             <br />
             <p>2022 My Lectronic. All rights reserved</p>
-          </div>
+          </div> */}
           <ul>
             {" "}
             How it Works

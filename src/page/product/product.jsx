@@ -1,11 +1,9 @@
 import { React, useState, useEffect } from "react";
 import "./product.css";
 import Cards from "../../components/cards/cards";
-import cart from "../../assets/icon/shopping_cart.png";
 import NavbarAuth from "../../components/navbarAuth/navbarauth";
 import { Col, Container, Row, InputGroup, Form, Button } from "react-bootstrap";
 import searchicon from "../../assets/icon/search.png";
-import filter from "../../assets/icon/outline_filter_alt_black_24dp.png";
 import Category from "../../components/navcategory/category";
 import useApi from "../../helpers/useApi";
 
@@ -103,7 +101,7 @@ function Product() {
               </InputGroup>
             </Col>
 
-            <div className="prod-btn-nav">
+            {/* <div className="prod-btn-nav">
               <Button variant="outline-light">
                 <img className="prod-btn-size" src={cart} alt="box" />
               </Button>
@@ -113,7 +111,7 @@ function Product() {
               <Button variant="outline-light">
                 <img className="prod-btn-size" src={filter} alt="box" />
               </Button>
-            </div>
+            </div> */}
           </Container>
         </Row>
 

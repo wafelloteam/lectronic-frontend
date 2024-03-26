@@ -73,7 +73,7 @@ function About() {
                 <Container className="about-container">
                   <img className="about-img-parent" src={rf} alt="box" />
                   <Card.Title className="about-role-title">
-                    Rizaldi Fauzi
+                    R Fauzi
                   </Card.Title>
                   <Card.Title className="about-card-title">
                     Project Manager
@@ -82,11 +82,10 @@ function About() {
                 <hr />
                 <Container className="about-container">
                 <Card.Text className="about-sub">
-                  "You don't have to be great to start, but you have to start to
-                  be great"
+                  "Connecting the Dots"
                 </Card.Text>
                   <Card.Text className="about-card-title">
-                  <Link to={'https://www.linkedin.com/in/rfauzi44/'} target="blank">
+                  <Link to={'https://www.linkedin.com/in/foobar/'} target="blank">
                     Click to Find Me on LinkedIn
                     </Link>
                   </Card.Text>
