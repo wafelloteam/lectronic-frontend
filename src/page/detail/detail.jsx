@@ -122,7 +122,7 @@ function Detail() {
                       <Card.Img src={product.image} alt="img-detail" />
                     </Container>
                     <br />
-                    <Container className="detail-container-imagekecil">
+                    {/* <Container className="detail-container-imagekecil">
                       <Card
                         className="detil-image-kecil customstyle"
                         style={{ width: "5rem", height: "5rem" }}
@@ -158,7 +158,7 @@ function Detail() {
                           <Card.Img src={product.image} alt="img-detail" />
                         </Container>
                       </Card>
-                    </Container>
+                    </Container> */}
                   </Card>
                 </div>
                 <br />
@@ -204,15 +204,15 @@ function Detail() {
                         </Container>
                       </Row>
                       <br />
-                      <Row>
+                      {/* <Row>
                         <Card.Text className="detail-card2-lineii">
                           Add Notes
                         </Card.Text>
-                      </Row>
+                      </Row> */}
                       <br />
                       <Row>
                         <Container className="detail-card2-line3">
-                          <Card.Text className="detail-nunito">
+                          <Card.Text className="detail-Montserrat">
                             Sub Total
                           </Card.Text>
                           <Card.Text className="detail-price">
@@ -232,7 +232,7 @@ function Detail() {
                             {!isAuth ? (
                               <div>
                                 <Button
-                                  className="btn-dtl detail-nunito"
+                                  className="btn-dtl detail-Montserrat"
                                   onClick={checkoutNot}
                                 >
                                   Checkout
@@ -251,7 +251,7 @@ function Detail() {
                             ) : (
                               <div>
                                 <Button
-                                  className="btn-dtl detail-nunito"
+                                  className="btn-dtl detail-Montserrat"
                                   onClick={checkout}
                                 >
                                   Checkout
@@ -294,18 +294,18 @@ function Detail() {
                 </h1>
                 <br />
                 <h5
-                  className="detail-nunito"
+                  className="detail-Montserrat"
                   data-aos="fade-left"
                   data-aos-delay="400"
                   data-aos-duration="2000"
                 >
                   Sold {product.sold} {"|"} Rating: {product.rating}
                 </h5>
-                <hr
+                {/* <hr
                   data-aos="fade-left"
                   data-aos-delay="400"
                   data-aos-duration="2000"
-                />
+                /> */}
                 <Container
                   data-aos="fade-up"
                   data-aos-delay="400"
@@ -320,7 +320,7 @@ function Detail() {
                     className="mb-3"
                   >
                     <Tab eventKey="detail" title="Details">
-                      <p className="detail-nunito">{product.description}</p>
+                      <p className="detail-Montserrat">{product.description}</p>
                     </Tab>
                     <Tab eventKey="Review" title="Review">
                       <Card
@@ -333,7 +333,7 @@ function Detail() {
                               {product.name}
                             </Card.Title>
                             &nbsp; &nbsp;
-                            <Card.Subtitle className="mb-1 detail-nunito">
+                            <Card.Subtitle className="mb-1 detail-Montserrat">
                               1 item {"|"}{" "}
                               <CurrencyFormat
                                 value={product.price}
@@ -358,7 +358,7 @@ function Detail() {
                             </Form.Group>
                           </Container>
                           <Container className="detail-review-btn">
-                            <Button className="btn-dtl detail-nunito">
+                            <Button className="btn-dtl detail-Montserrat">
                               Submit
                             </Button>
                           </Container>

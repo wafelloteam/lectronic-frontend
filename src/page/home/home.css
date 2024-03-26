@@ -25,14 +25,14 @@
 }
 
 .hm-font-header {
-    font-family: Nunito;
+    font-family: Montserrat;
     font-weight: 800;
     font-size: 50px;
     
 }
 
 .hm-font-desc {
-    font-family: Nunito;
+    font-family: Montserrat;
     font-size: 15px;
 }
 
@@ -68,7 +68,7 @@
     margin-bottom: 7px;
     width: auto;
     height: 29px;
-    font-family: 'Nunito';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -87,7 +87,7 @@
 }
 
 .text3 {
-    font-family: 'Nunito';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 800;
     font-size: 60px;
@@ -116,7 +116,7 @@
 .hmCardStyle{
     width: 386px;
     height: 300px;
-    font-family: 'Nunito';
+    font-family: 'Montserrat';
     font-style: normal;
     font-size: 18px;
     background: white;
@@ -162,18 +162,18 @@
 }
 
 .hm-card-title {
-    font-family: Nunito;
+    font-family: Montserrat;
     font-weight: bold;
 }
 
 .hm-pg-title {
-    font-family: Nunito;
+    font-family: Montserrat;
     font-weight: bold;
 }
 
 
 .hm-card-subtitle {
-    font-family: Nunito;
+    font-family: Montserrat;
     font-size: small;
    
 }

@@ -13,13 +13,13 @@
 .detail-card2-line2 {
   display: flex;
   justify-content: flex-end;
-  font-family: Nunito;
+  font-family: Montserrat;
 }
 
 .detail-card2-lineii {
   display: flex;
   justify-content: flex-start;
-  font-family: Nunito;
+  font-family: Montserrat;
 }
 
 .detail-card2-line3 {
@@ -57,18 +57,18 @@
 }
 
 .detail-font-prop {
-  font-family: Nunito;
+  font-family: Montserrat;
   font-weight: bold;
 }
 
 .detail-price {
-  font-family: Nunito;
+  font-family: Montserrat;
   font-weight: bold;
   font-size: x-large;
 }
 
-.detail-nunito {
-  font-family: Nunito;
+.detail-Montserrat {
+  font-family: Montserrat;
 }
 
 .detil-image-kecil {
@@ -110,14 +110,14 @@
 
 .wrapper span {
     width: 120%;
-    font-family: Nunito;
+    font-family: Montserrat;
     font-weight: bold;
     font-size: small;
     text-align: center;
 }
 
 .dtl-btn-count {
-    font-family: Nunito;
+    font-family: Montserrat;
     font-weight: bold;
     color: #0300AD;
 

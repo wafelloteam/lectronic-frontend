@@ -9,8 +9,7 @@ export const Content = styled.div`
   margin: 5% auto 0px;
   display: flex;
   flex-wrap: wrap;
-  padding: 166px 200px;
-  font-family: Nunito;
+  padding: 16px 20px;
   font-size: 18px;
   color: #333333;
   justify-content: space-between;

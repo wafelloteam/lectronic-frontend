@@ -16,7 +16,7 @@
 }
 
 .delivery {
-    font-family: 'Nunito';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 800;
     font-size: 26px;
@@ -40,7 +40,7 @@
 }
 
 .address-text {
-    font-family: 'Nunito';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     width: 403px;
@@ -61,7 +61,7 @@
 
 .adrr-btn {
     padding: 17px 37px;
-    font-family: 'Nunito';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;

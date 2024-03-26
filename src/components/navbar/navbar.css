@@ -10,7 +10,7 @@
 .nv-center {
     display: flex;
     justify-content: space-around;
-    flex-wrap: inherit;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -20,7 +20,7 @@
 
 .nv-txt {
     margin-left: 5px;
-    font-family: Nunito;
+    font-family: Montserrat;
     color: #0300AD;
     font-weight: 1000;
 }
@@ -30,7 +30,7 @@
 }
 
 .user-nav {
-    font-family: Nunito;
+    font-family: Montserrat;
     color: #777777;
     font-size: small;
     padding-top: -30px;

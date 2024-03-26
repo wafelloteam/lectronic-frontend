@@ -67,7 +67,7 @@ function Home() {
                 >
                   Anywhere
                 </h1>
-                <p
+                {/* <p
                   data-aos="fade-right"
                   data-aos-delay="600"
                   data-aos-duration="1000"
@@ -75,7 +75,7 @@ function Home() {
                 >
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                   amet sint. Velit officia consequat duis enim velit mollit..
-                </p>
+                </p> */}
                 <div>
                   <Button
                     data-aos="fade-right"
@@ -141,12 +141,12 @@ function Home() {
                     <Card.Title className="hm-card-title">
                       Select Product
                     </Card.Title>
-                    <Card.Text className="hm-card-subtitle">
+                    {/* <Card.Text className="hm-card-subtitle">
                       Amet minim mollit non deserunt ullamco est sit aliqua
                       dolor do amet sint. Velit officia consequat duis enim
                       velit mollit. Exercitation veniam consequat sunt nostrud
                       amet.
-                    </Card.Text>
+                    </Card.Text> */}
                   </Card>
                 </Col>
                 <Col>
@@ -163,12 +163,12 @@ function Home() {
                     <Card.Title className="hm-card-title">
                       Make Payment
                     </Card.Title>
-                    <Card.Text className="hm-card-subtitle">
+                    {/* <Card.Text className="hm-card-subtitle">
                       Amet minim mollit non deserunt ullamco est sit aliqua
                       dolor do amet sint. Velit officia consequat duis enim
                       velit mollit. Exercitation veniam consequat sunt nostrud
                       amet.
-                    </Card.Text>
+                    </Card.Text> */}
                   </Card>
                 </Col>
                 <Col>
@@ -185,12 +185,12 @@ function Home() {
                     <Card.Title className="hm-card-title">
                       Receive Product
                     </Card.Title>
-                    <Card.Text className="hm-card-subtitle">
+                    {/* <Card.Text className="hm-card-subtitle">
                       Amet minim mollit non deserunt ullamco est sit aliqua
                       dolor do amet sint. Velit officia consequat duis enim
                       velit mollit. Exercitation veniam consequat sunt nostrud
                       amet.
-                    </Card.Text>
+                    </Card.Text> */}
                   </Card>
                 </Col>
               </Row>

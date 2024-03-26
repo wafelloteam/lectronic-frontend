@@ -13,7 +13,7 @@
 
 .prod-name {
     margin-bottom: 16px;
-    font-family: Nunito;
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Nunito';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 200;
     font-size: 12px;
@@ -50,7 +50,7 @@
 
 .prod-price {
     margin-top: 16px;
-    font-family: Nunito;
+    font-family: Montserrat;
     font-style: normal;                     
     font-weight: 700;
     font-size: 22px;

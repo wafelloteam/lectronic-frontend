@@ -16,12 +16,8 @@ function Footer() {
               height="40"
               className="d-inline-block align-top"
             />
-            <p>
-              {" "}
-              <br />
-              91 Spring Dr. Hudsonville, MI 49426
-            </p>
-            <hr /> <br />
+            <br />
+            <br />
             <p>2022 My Lectronic. All rights reserved</p>
           </div>
           <ul>

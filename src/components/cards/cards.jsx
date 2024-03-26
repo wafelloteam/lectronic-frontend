@@ -39,7 +39,7 @@ function Cards(props) {
   }
   return (
     <Col className="col-md-4">
-      <Card className="m-5 card-rad" style={{ width: "18rem" }}>
+      <Card className="m-5 card-rad">
         <div className="m-3 contaner">
           <Card.Text className="card-txt1">
             <p style={{ textTransform: "capitalize" }}>{props.category}</p>{" "}

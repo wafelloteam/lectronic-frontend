@@ -1,6 +1,6 @@
 .cart-header {
     padding-top: 36px;
-    font-family: Nunito;
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 800;
     font-size: 60px;
@@ -19,7 +19,7 @@
 
 .select-all {
     margin-left: 50px;
-    font-family: 'Nunito';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -88,7 +88,7 @@
 
 #total-checkout > .total {
     margin-bottom: 30px;
-    font-family: 'Nunito';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -112,7 +112,7 @@
 
 #total-checkout > .item > .left {
     padding-bottom: 17px;
-    font-family: Nunito;
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -125,7 +125,7 @@
 }
 
 #total-checkout > .item > .price {
-    font-family: Nunito;
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 200;
     font-size: 18px;
@@ -140,7 +140,7 @@
 #total-checkout  > .bill {
     display: flex;
     justify-content: space-between;
-    font-family: Nunito;
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 800;
     font-size: 26px;
@@ -164,7 +164,7 @@
 }
 
 .checkout-btn > .text{
-    font-family: 'Nunito';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 200;
     font-size: 18px;

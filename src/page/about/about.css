@@ -22,20 +22,20 @@
 }
 
 .about-role-title {
-    font-family: Nunito;
+    font-family: Montserrat;
     font-weight: bold;
     font-size: large;
 }
 
 .about-card-title {
-    font-family: Nunito;
+    font-family: Montserrat;
     font-weight: bold;
     font-size: medium;
     color: rgb(245, 72, 9);
 }
 
 .about-sub {
-    font-family: Nunito;
+    font-family: Montserrat;
     font-weight: normal;
     font-size: small;
 }
@@ -43,7 +43,7 @@
 .about-card-style{
     width: 386px;
     height: 350px;
-    font-family: 'Nunito';
+    font-family: 'Montserrat';
     font-style: normal;
     font-size: 18px;
     background: white;

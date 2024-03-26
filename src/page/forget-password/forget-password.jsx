@@ -127,7 +127,7 @@ function ForgetPassword() {
               <Player
                 autoplay
                 loop
-                src="https://assets4.lottiefiles.com/private_files/lf30_GjhcdO.json"
+                src="https://lottie.host/44615029-f7a3-43d7-a0e5-2453a4c1c734/Z0zGUD2LTR.json"
                 style={{ height: "500px", width: "500px" }}
               >
                 <Controls
